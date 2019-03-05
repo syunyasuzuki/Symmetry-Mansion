@@ -17,8 +17,8 @@ public class TitleCon : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            FadeController.isFade = true;
-            FadeController.isFadeOut = true;
+            FadeController.isFade1 = true;
+            FadeController.isFadeOut1 = true;
             Invoke("Scene", 2.5f);
         }
 	}
