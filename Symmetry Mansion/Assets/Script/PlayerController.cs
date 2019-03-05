@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         //待機
-        if (key == 0 && kagu.parents_set == false)
+        if (key == 0 && karuikagu.parents_set == false)
         {
             animator.SetTrigger("Stand-byTrigger");
 
