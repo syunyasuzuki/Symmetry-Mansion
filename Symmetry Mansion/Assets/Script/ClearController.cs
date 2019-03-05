@@ -3,27 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TitleCon : MonoBehaviour
-{
+public class ClearController : MonoBehaviour {
 
 	// Use this for initialization
-	void Start ()
-    {
+	void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update ()
-    {
+	void Update () {
         if (Input.GetKeyDown(KeyCode.Return))
         {
             FadeController.isFade1 = true;
             FadeController.isFadeOut1 = true;
             Invoke("Scene", 2.5f);
+
         }
-	}
+    }
     void Scene()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("TitleScene");
     }
+
 }
