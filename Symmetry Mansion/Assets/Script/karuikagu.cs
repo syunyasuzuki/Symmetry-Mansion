@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class karuikagu : MonoBehaviour {
+public class karuikagu : MonoBehaviour
+{
 
     public GameObject Player;
     public GameObject kagu;
@@ -10,8 +11,6 @@ public class karuikagu : MonoBehaviour {
     public static bool parents_set;
 
     float Z;
-
-    Collider2D kagu_ObjectCollider;
 
     // Use this for initialization
     void Start()
@@ -21,45 +20,35 @@ public class karuikagu : MonoBehaviour {
 
         parents_set = false;
 
-        //コライダーを取得
-        kagu_ObjectCollider = GetComponent<Collider2D>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
         //motu_setが起動かつZキーが押された時
-        if (motu_set == true && Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Z))
         {
-            //コライダ　Trigger OFF 
-            kagu_ObjectCollider.isTrigger = false;
+            //motu_set起動
+            motu_set = true;
         }
 
         //aがプレイヤと親子関係の時
         if (kagu.transform.parent == Player.transform)
         {
             //Zキーが押された時
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyUp(KeyCode.Z))
             {
-                //親子関係解除
-                kagu.transform.parent = null;
+                //motu_set起動しない
+                motu_set = false;
 
-                /*position取得*/
-                //Vector2 pos = Player.transform.position;
-                //Player.transform.position = new Vector2(pos.x, pos.y);
-                //X = pos.x;
+                if (motu_set == false)
+                {
+                    //親子関係解除
+                    kagu.transform.parent = null;
 
-                //家具の向き（ベクトル）を取得
-                Vector3 pos = transform.position + transform.forward;
+                    parents_set = false;
+                }
 
-                //プレイヤの正面に置く
-                kagu.transform.position = pos;
-
-                //コライダ Trigger ON
-                kagu_ObjectCollider.isTrigger = true;
-
-                parents_set = false;
             }
         }
     }
@@ -67,52 +56,20 @@ public class karuikagu : MonoBehaviour {
     void OnTriggerStay2D(Collider2D col)
     {
         //プレイヤtagに触れているとき
-        if (col.gameObject.tag == "Player")
+        if (motu_set == true && col.gameObject.tag == "Player")
         {
-            //motu_set起動
-            motu_set = true;
-
-            Debug.Log("チェック");
-        }
-        else
-        {
-            //motu_set起動しない
-            motu_set = false;
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-        //motu_set起動しない
-        motu_set = false;
-    }
-
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        //プレイヤtagに触れているとき
-        if (col.gameObject.tag == "Player")
-        {
-            parents_set = true;
-
-            //Vector2 pos = a.transform.position;
-            //a.transform.position = new Vector2(pos.x, pos.y);
+            //家具の向き（ベクトル）を取得
+            Vector3 pos = transform.position + transform.forward;
 
             //親子関係
             kagu.transform.parent = Player.transform;
 
-            //a.transform.position = pos.y;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D col)
-    {
-        //プレイヤtagに触れているとき
-        if (col.gameObject.tag == "Player")
-        {
             parents_set = true;
 
-            //親子関係
-            kagu.transform.parent = Player.transform;
+            //プレイヤの正面に置く
+            kagu.transform.position = pos;
+
+
         }
     }
 }
