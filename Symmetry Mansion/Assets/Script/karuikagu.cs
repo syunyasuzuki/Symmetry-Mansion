@@ -25,7 +25,7 @@ public class karuikagu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //motu_setが起動かつZキーが押された時
+        //Zキーが押された時
         if (Input.GetKey(KeyCode.Z))
         {
             //motu_set起動
@@ -35,11 +35,18 @@ public class karuikagu : MonoBehaviour
         //aがプレイヤと親子関係の時
         if (kagu.transform.parent == Player.transform)
         {
+            //スタミナゲージを減らす
+            GameObject director = GameObject.Find("GameDirector");
+            director.GetComponent<GameDirector>().DecreasS();
+
             //Zキーが押された時
             if (Input.GetKeyUp(KeyCode.Z))
             {
                 //motu_set起動しない
                 motu_set = false;
+
+                //GameObject director = GameObject.Find("GameDirector");
+                //director.GetComponent<GameDirector>().DecreasS();
 
                 if (motu_set == false)
                 {
