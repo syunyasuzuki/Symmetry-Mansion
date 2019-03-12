@@ -51,11 +51,13 @@ public class karuikagu : MonoBehaviour
             //GameObject director = GameObject.Find("GameDirector");
             //director.GetComponent<GameDirector>().DecreasS();
 
-            //Zキーが押された時
+            //Zキーが押されていない時
             if (Input.GetKeyUp(KeyCode.Z))
             {
                 //motu_set起動しない
                 motu_set = false;
+
+                play_set = false;
 
                 //GameObject director = GameObject.Find("GameDirector");
                 //director.GetComponent<GameDirector>().DecreasS();
@@ -66,6 +68,7 @@ public class karuikagu : MonoBehaviour
                     kagu.transform.parent = null;
 
                     parents_set = false;
+
                 }
 
             }
@@ -81,9 +84,9 @@ public class karuikagu : MonoBehaviour
         }
        
         //プレイヤtagに触れているとき
-        if (motu_set == true && col.gameObject.tag == "Player")
+        if (parents_set == false)
         {
-            if (parents_set == false)
+            if (motu_set == true && col.gameObject.tag == "Player")
             {
                 //家具の向き（ベクトル）を取得
                 Vector3 pos = transform.position + transform.forward;
