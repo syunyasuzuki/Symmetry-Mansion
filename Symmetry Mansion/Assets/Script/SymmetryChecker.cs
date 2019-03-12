@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class SymmetryChecker : MonoBehaviour {
 
@@ -10,11 +11,24 @@ public class SymmetryChecker : MonoBehaviour {
     Vector2[] pos;            //座標を取得
     public GameObject[] Kagu;
     public static bool Symmetry;
-
+    public GameObject kagu1;
+    public GameObject kagu2;
+    public GameObject kagu3;
+    public GameObject kagu4;
+    public GameObject kagu5;
+    public GameObject kagu6;
+    public GameObject kagu7;
+    public GameObject kagu8;
+    public GameObject kagu9;
+    public GameObject kagu10;
+    public GameObject kagu11;
+    public GameObject kagu12;
 
     // Use this for initialization
     void Start () {
 
+        //var strArray = new[] {GameObject.FindGameObjectsWithTag("Kagu")};
+        //Array.Sort(strArray);
         Kagu = GameObject.FindGameObjectsWithTag("Kagu");//KaguのタグでKaguのオブジェクトを取得
         Symmetry = false;
 
