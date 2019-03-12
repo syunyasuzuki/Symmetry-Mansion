@@ -9,6 +9,7 @@ public class karuikagu : MonoBehaviour
     public GameObject kagu;
     public bool motu_set;
     public static bool parents_set;
+    public bool play_set;
 
     float Z;
 
@@ -20,6 +21,8 @@ public class karuikagu : MonoBehaviour
 
         parents_set = false;
 
+        play_set = false;
+
       
 
     }
@@ -27,15 +30,19 @@ public class karuikagu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Zキーが押された時
-        if (Input.GetKey(KeyCode.Z))
+        if (play_set == true)
         {
-            
+            //Zキーが押された時
+            if (Input.GetKey(KeyCode.Z))
+            {
+
                 //motu_set起動
                 motu_set = true;
-            
-          
+
+
+            }
         }
+       
 
         //aがプレイヤと親子関係の時
         if (kagu.transform.parent == Player.transform)
@@ -67,6 +74,10 @@ public class karuikagu : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
+        if(col.gameObject.tag == "Player")
+        {
+            play_set = true;
+        }
        
         //プレイヤtagに触れているとき
         if (motu_set == true && col.gameObject.tag == "Player")
@@ -84,5 +95,10 @@ public class karuikagu : MonoBehaviour
 
 
         }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        play_set = false;
     }
 }

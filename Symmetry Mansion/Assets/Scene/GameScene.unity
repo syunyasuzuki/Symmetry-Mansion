@@ -635,6 +635,17 @@ Prefab:
       propertyPath: kagu
       value: 
       objectReference: {fileID: 719116856}
+    - target: {fileID: 212221235885073908, guid: ed2bc0d1d793426409b1146213f9754d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 05c1221647c68264e945d78110304a69,
+        type: 3}
+    - target: {fileID: 212221235885073908, guid: ed2bc0d1d793426409b1146213f9754d,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed2bc0d1d793426409b1146213f9754d, type: 2}
   m_IsPrefabParent: 0
@@ -691,6 +702,17 @@ Prefab:
       propertyPath: kagu
       value: 
       objectReference: {fileID: 1620530820}
+    - target: {fileID: 212221235885073908, guid: ed2bc0d1d793426409b1146213f9754d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: 05c1221647c68264e945d78110304a69,
+        type: 3}
+    - target: {fileID: 212221235885073908, guid: ed2bc0d1d793426409b1146213f9754d,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed2bc0d1d793426409b1146213f9754d, type: 2}
   m_IsPrefabParent: 0
