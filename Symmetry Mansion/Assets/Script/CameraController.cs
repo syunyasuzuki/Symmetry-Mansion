@@ -23,7 +23,7 @@ public class CameraController : MonoBehaviour {
 
         if (transform.position.x < -1.31f)
         {
-            transform.position = new Vector3(-1.31f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-1.30f, transform.position.y, transform.position.z);
         }
 
         if (transform.position.x > 1.33f)

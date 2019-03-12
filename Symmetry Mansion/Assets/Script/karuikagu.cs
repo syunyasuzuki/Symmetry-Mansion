@@ -82,18 +82,20 @@ public class karuikagu : MonoBehaviour
         //プレイヤtagに触れているとき
         if (motu_set == true && col.gameObject.tag == "Player")
         {
-            //家具の向き（ベクトル）を取得
-            Vector3 pos = transform.position + transform.forward;
+            if (parents_set == false)
+            {
+                //家具の向き（ベクトル）を取得
+                Vector3 pos = transform.position + transform.forward;
 
-            //親子関係
-            kagu.transform.parent = Player.transform;
+                //親子関係
+                kagu.transform.parent = Player.transform;
 
-            parents_set = true;
+                parents_set = true;
 
-            //プレイヤの正面に置く
-            kagu.transform.position = pos;
-
-
+                //プレイヤの正面に置く
+                kagu.transform.position = pos;
+            }
+            
         }
     }
 
