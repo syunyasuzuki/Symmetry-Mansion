@@ -19,5 +19,4 @@ public class GameTest : MonoBehaviour {
             FadeController.isFadeOut2 = true;          
         }
     }
-
 }

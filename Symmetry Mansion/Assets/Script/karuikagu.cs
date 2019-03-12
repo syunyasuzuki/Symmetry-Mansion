@@ -20,6 +20,8 @@ public class karuikagu : MonoBehaviour
 
         parents_set = false;
 
+      
+
     }
 
     // Update is called once per frame
@@ -28,16 +30,19 @@ public class karuikagu : MonoBehaviour
         //Zキーが押された時
         if (Input.GetKey(KeyCode.Z))
         {
-            //motu_set起動
-            motu_set = true;
+            
+                //motu_set起動
+                motu_set = true;
+            
+          
         }
 
         //aがプレイヤと親子関係の時
         if (kagu.transform.parent == Player.transform)
         {
             //スタミナゲージを減らす
-            GameObject director = GameObject.Find("GameDirector");
-            director.GetComponent<GameDirector>().DecreasS();
+            //GameObject director = GameObject.Find("GameDirector");
+            //director.GetComponent<GameDirector>().DecreasS();
 
             //Zキーが押された時
             if (Input.GetKeyUp(KeyCode.Z))
@@ -62,6 +67,7 @@ public class karuikagu : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
+       
         //プレイヤtagに触れているとき
         if (motu_set == true && col.gameObject.tag == "Player")
         {
