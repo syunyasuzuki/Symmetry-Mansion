@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class kaidanscript : MonoBehaviour {
-    public Vector2 pos;
+    public GameObject pos;
     bool set;
     private GameObject Player;
     // Use this for initialization
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         set = false;
         //GetComponent<kaidanscript>().enabled = false;
     }
@@ -17,37 +18,16 @@ public class kaidanscript : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            set = true;
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                Player.transform.position = pos.transform.position;
+            }
             //GetComponent<kaidanscript>().enabled = true;
             Debug.Log("チェック");
-        }
-    }
-    void OnTriggerExsit2D(Collider2D other)//プレイヤーが離れた時
-    {
-        if (other.tag == "Player")
-        {
-            set = false;
-            //GetComponent<kaidanscript>().enabled = false;
         }
     }
     // Update is called once per frame
     void Update()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        switch (set)
-        {
-            case true:
-                if (Input.GetKeyDown(KeyCode.UpArrow))
-                {
-                    Player.transform.position = new Vector2(pos.x, pos.y);
-
-                }
-                break;
-            case false:
-                break;
-        }
-
-
-
     }
 }

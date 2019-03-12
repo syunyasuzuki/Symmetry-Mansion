@@ -28,7 +28,6 @@ public class SymmetryChecker : MonoBehaviour {
         x_Multipel = new float[Kagu.Length];
         y_Multipel = new float[Kagu.Length];
         x_total = new float[Kagu.Length];
-
         for (int i = 0; i < Kagu.Length; i++)
         {
             pos[i] = Kagu[i].transform.position;//posで
@@ -39,7 +38,7 @@ public class SymmetryChecker : MonoBehaviour {
         }
 
         x_total[0] = x_Multipel[0] + x_Multipel[1];//x座標の計算
-        if (-0.3f <= x_total[0] && x_total[0] <= 0.3)
+        if (-0.3f <= x_total[0] && x_total[0] <= 0.3)//-0.3または0.3の誤差内であればシンメトリーになる
         {
             Symmetry = true;
         }
