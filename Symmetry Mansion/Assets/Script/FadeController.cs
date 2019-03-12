@@ -8,36 +8,58 @@ public class FadeController : MonoBehaviour {
 
     public Image FadeImage1;
     public Image FadeImage2;
+    public Image FadeImage3;
 
     public static bool isFade1;
     public static bool isFadeOut1;
     public static bool isFadeIn1;
+
     public static bool isFade2;
     public static bool isFadeOut2;
     public static bool isFadeIn2;
+
+    public static bool isFade3;
+    public static bool isFadeOut3;
+    public static bool isFadeIn3;
+
     public static float alpha1;
     public static float alpha2;
+    public static float alpha3;
     // Use this for initialization
     void Start() {
         isFade1 = true;
         isFadeIn1 = true;
         isFadeOut1 = false;
+
         isFade2 = true;
         isFadeIn2 = true;
         isFadeOut2 = false;
+
+        isFade3 = true;
+        isFadeIn3 = true;
+        isFadeOut3 = false;
         //if(SceneManager.GetActiveScene().name== "TitleScene")
         //{
         //    alpha1 = 1.0f;
         //    alpha2 = 0.0f;
         //}
-        if(SceneManager.GetActiveScene().name=="ClearScene"){
+        if (SceneManager.GetActiveScene().name=="ClearScene")
+        {
             alpha1 = 0.0f;
             alpha2 = 1.0f;
+            alpha3 = 0.0f;
+        }
+        else if(SceneManager.GetActiveScene().name == "GameOverScene")
+        {
+            alpha1 = 0.0f;
+            alpha2 = 0.0f;
+            alpha3 = 1.0f;
         }
         else
         {
             alpha1 = 1.0f;
             alpha2 = 0.0f;
+            alpha3 = 0.0f;
         }
     }
 	
@@ -66,7 +88,18 @@ public class FadeController : MonoBehaviour {
                 FadeOut2();
             }
         }
-	}
+        if (isFade3)
+        {
+            if (isFadeIn3)
+            {
+                FadeIn3();
+            }
+            else if (isFadeOut3)
+            {
+                FadeOut3();
+            }
+        }
+    }
 
     public void FadeIn1()
     {
@@ -99,7 +132,6 @@ public class FadeController : MonoBehaviour {
             isFade2 = false;
         }
     }
-
     public void FadeOut2()
     {
         alpha2 += 0.02f;
@@ -112,5 +144,25 @@ public class FadeController : MonoBehaviour {
         }
     }
 
-
+    public void FadeIn3()
+    {
+        alpha3 -= 0.05f;
+        FadeImage3.color = new Color(1.0f, 1.0f, 1.0f, alpha3);
+        if (alpha2 <= 0.0f)
+        {
+            isFadeIn2 = false;
+            isFade2 = false;
+        }
+    }
+    public void FadeOut3()
+    {
+        alpha3 += 0.02f;
+        FadeImage3.color = new Color(1.0f, 1.0f, 1.0f, alpha3);
+        if (alpha3 >= 1.0f)
+        {
+            isFadeOut3 = false;
+            isFade3 = false;
+            SceneManager.LoadScene("ClearScene");
+        }
+    }
 }
