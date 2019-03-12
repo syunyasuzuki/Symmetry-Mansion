@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour {
 
     Rigidbody2D rigid2D;
     Animator animator;
-    float walkForce = 10.0f;
-    float maxWalkSpeed = 1.0f;
+    float walkForce = 20.0f;
+    float maxWalkSpeed = 1.5f;
 
 
     // Use this for initialization
