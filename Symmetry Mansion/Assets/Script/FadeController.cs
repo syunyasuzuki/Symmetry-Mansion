@@ -148,10 +148,10 @@ public class FadeController : MonoBehaviour {
     {
         alpha3 -= 0.05f;
         FadeImage3.color = new Color(1.0f, 1.0f, 1.0f, alpha3);
-        if (alpha2 <= 0.0f)
+        if (alpha3 <= 0.0f)
         {
-            isFadeIn2 = false;
-            isFade2 = false;
+            isFadeIn3 = false;
+            isFade3 = false;
         }
     }
     public void FadeOut3()
