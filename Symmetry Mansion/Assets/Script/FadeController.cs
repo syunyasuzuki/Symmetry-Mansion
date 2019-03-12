@@ -162,7 +162,6 @@ public class FadeController : MonoBehaviour {
         {
             isFadeOut3 = false;
             isFade3 = false;
-            SceneManager.LoadScene("ClearScene");
         }
     }
 }
