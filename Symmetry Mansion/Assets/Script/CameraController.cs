@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour {
 	void Update ()
     {
         this.player = GameObject.FindWithTag("Player");
-        if (transform.position.x >= -1.31f && transform.position.x <= 1.32f)
+        if (transform.position.x >= -1.31f && transform.position.x <= 1.33f)
         {
             transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
         }
