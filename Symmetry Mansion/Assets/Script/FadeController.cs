@@ -156,7 +156,7 @@ public class FadeController : MonoBehaviour {
     }
     public void FadeOut3()
     {
-        alpha3 += 0.02f;
+        alpha3 += 0.05f;
         FadeImage3.color = new Color(1.0f, 1.0f, 1.0f, alpha3);
         if (alpha3 >= 1.0f)
         {
