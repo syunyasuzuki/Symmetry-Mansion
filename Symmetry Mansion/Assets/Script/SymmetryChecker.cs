@@ -24,14 +24,16 @@ public class SymmetryChecker : MonoBehaviour {
     void Update()
     {
 
-        pos = new Vector2[Kagu.Length];
-        x_Multipel = new float[Kagu.Length];
-        y_Multipel = new float[Kagu.Length];
-        x_total = new float[Kagu.Length];
+        pos = new Vector2[Kagu.Length];     //Kaguの座標を取得
+        x_Multipel = new float[Kagu.Length];//Kaguのx座標を取得
+        y_Multipel = new float[Kagu.Length];//Kaguのy座標を取得
+        x_total = new float[Kagu.Length];   //Kaguのx座標の計算結果を表示
+
+        //x座標とy座標の座標を毎回取得
         for (int i = 0; i < Kagu.Length; i++)
         {
-            pos[i] = Kagu[i].transform.position;//posで
-            Kagu[i].transform.position = new Vector2(pos[i].x, pos[i].y);//
+            pos[i] = Kagu[i].transform.position;
+            Kagu[i].transform.position = new Vector2(pos[i].x, pos[i].y);
             x_Multipel[i] = pos[i].x;
             y_Multipel[i] = pos[i].y;
 
