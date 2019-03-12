@@ -13,8 +13,7 @@ public class kaidanCon : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Player = GameObject.Find("Player");
-        
+        Player = GameObject.Find("Player");        
     }
 
     // Update is called once per frame
@@ -28,9 +27,17 @@ public class kaidanCon : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                Player.transform.position = kaidan.transform.position;
+            {               
+                FadeController.isFade3 = true;
+                FadeController.isFadeOut3 = true;
+                Invoke("KaidanMove", 2);
             }
         }
     }   
+    void KaidanMove()
+    {
+        Player.transform.position = kaidan.transform.position;
+        FadeController.isFade3 = true;
+        FadeController.isFadeIn3 = true;
+    }
 }
