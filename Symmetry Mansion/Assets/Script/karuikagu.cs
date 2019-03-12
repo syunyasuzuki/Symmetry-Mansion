@@ -11,8 +11,6 @@ public class karuikagu : MonoBehaviour
     public static bool parents_set;
     public bool play_set;
 
-    float Z;
-
     // Use this for initialization
     void Start()
     {
@@ -35,16 +33,13 @@ public class karuikagu : MonoBehaviour
             //Zキーが押された時
             if (Input.GetKey(KeyCode.Z))
             {
-
                 //motu_set起動
                 motu_set = true;
-
-
             }
         }
-       
 
-        //aがプレイヤと親子関係の時
+
+        //プレイヤと親子関係の時
         if (kagu.transform.parent == Player.transform)
         {
             //スタミナゲージを減らす
@@ -60,15 +55,18 @@ public class karuikagu : MonoBehaviour
                 //GameObject director = GameObject.Find("GameDirector");
                 //director.GetComponent<GameDirector>().DecreasS();
 
-                if (motu_set == false)
-                {
-                    //親子関係解除
-                    kagu.transform.parent = null;
+                //if (motu_set == false)
+                //{
+                //    //親子関係解除
+                //    kagu.transform.parent = null;
 
-                    parents_set = false;
+                //    parents_set = false;
+                //}
 
-                }
+                //親子関係解除
+                kagu.transform.parent = null;
 
+                parents_set = false;
             }
         }
     }
@@ -76,15 +74,16 @@ public class karuikagu : MonoBehaviour
     void OnTriggerStay2D(Collider2D col)
     {
         //プレイヤtagに触れているとき
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player"&& parents_set == false)
         {
             play_set = true;
         }
        
-        //プレイヤtagに触れているとき
-        if (parents_set == false)
+        
+        if (parents_set == false&& play_set == true)
         {
-            if (motu_set == true && col.gameObject.tag == "Player")
+            //プレイヤtagに触れているとき
+            if (motu_set == true && col.gameObject.tag == "Player" && parents_set == false)
             {
                 //家具の向き（ベクトル）を取得
                 Vector3 pos = transform.position + transform.forward;
@@ -93,16 +92,12 @@ public class karuikagu : MonoBehaviour
                 kagu.transform.parent = Player.transform;
 
                 parents_set = true;
-
-                //プレイヤの正面に置く
-                kagu.transform.position = pos;
-            }
-            
+            }           
         }
     }
 
     void OnTriggerExit2D(Collider2D col)
     {
-        play_set = false;
+        play_set = false;           
     }
 }
