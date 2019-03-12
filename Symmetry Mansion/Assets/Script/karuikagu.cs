@@ -57,8 +57,6 @@ public class karuikagu : MonoBehaviour
                 //motu_set起動しない
                 motu_set = false;
 
-                play_set = false;
-
                 //GameObject director = GameObject.Find("GameDirector");
                 //director.GetComponent<GameDirector>().DecreasS();
 
