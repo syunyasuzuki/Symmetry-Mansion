@@ -7,7 +7,7 @@ public class SymmetryChecker : MonoBehaviour {
     public float[] x_Multipel;//x座標を入れる箱
     public float[] x_total;   //計算したx座標を入れる箱
     public float[] y_Multipel;//y座標を入れる箱
-    Vector2[] pos;            //座標を取得する
+    Vector2[] pos;            //座標を取得
     public GameObject[] Kagu;
     public static bool Symmetry;
 
@@ -15,7 +15,7 @@ public class SymmetryChecker : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        Kagu = GameObject.FindGameObjectsWithTag("Kagu");//Tagで複数のGameObjectを取得する
+        Kagu = GameObject.FindGameObjectsWithTag("Kagu");//KaguのタグでKaguのオブジェクトを取得
         Symmetry = false;
 
     }
