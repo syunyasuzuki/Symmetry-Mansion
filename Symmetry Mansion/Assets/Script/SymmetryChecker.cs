@@ -7,7 +7,7 @@ public class SymmetryChecker : MonoBehaviour {
     public float[] x_Multipel;//x座標を入れる箱
     public float[] x_total;   //計算したx座標を入れる箱
     public float[] y_Multipel;//y座標を入れる箱
-    Vector2[] pos;           //座標を取得する
+    Vector2[] pos;            //座標を取得する
     public GameObject[] Kagu;
     public static bool Symmetry;
 

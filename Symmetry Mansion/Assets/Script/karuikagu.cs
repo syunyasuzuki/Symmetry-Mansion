@@ -74,7 +74,8 @@ public class karuikagu : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
-        if(col.gameObject.tag == "Player")
+        //プレイヤtagに触れているとき
+        if (col.gameObject.tag == "Player")
         {
             play_set = true;
         }
