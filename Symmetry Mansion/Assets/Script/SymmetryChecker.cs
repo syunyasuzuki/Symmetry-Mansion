@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -30,6 +31,7 @@ public class SymmetryChecker : MonoBehaviour {
         //var strArray = new[] {GameObject.FindGameObjectsWithTag("Kagu")};
         //Array.Sort(strArray);
         Kagu = GameObject.FindGameObjectsWithTag("Kagu");//KaguのタグでKaguのオブジェクトを取得
+        
         Symmetry = false;
 
     }
