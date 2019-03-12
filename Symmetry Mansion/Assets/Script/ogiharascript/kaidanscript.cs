@@ -19,7 +19,7 @@ public class kaidanscript : MonoBehaviour {
         {
             set = true;
             //GetComponent<kaidanscript>().enabled = true;
-            Debug.Log("チェック");
+            //Debug.Log("チェック");
         }
     }
     void OnTriggerExsit2D(Collider2D other)//プレイヤーが離れた時
