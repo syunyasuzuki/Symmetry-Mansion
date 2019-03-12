@@ -293,10 +293,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 166987363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc07287321a70af4b96ffcfbd0d57fec, type: 3}
+  m_Script: {fileID: 11500000, guid: e6c73419debd81347ab213ef1e2b8e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: -3, y: 0.5}
+  kaidan: {fileID: 220332055}
 --- !u!61 &166987365
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &220332055
 GameObject:
@@ -477,7 +477,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &220332059
 MonoBehaviour:
@@ -487,10 +487,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 220332055}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc07287321a70af4b96ffcfbd0d57fec, type: 3}
+  m_Script: {fileID: 11500000, guid: e6c73419debd81347ab213ef1e2b8e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: -3, y: 1.5}
+  kaidan: {fileID: 166987363}
 --- !u!1 &233502896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,10 +1217,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076518236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc07287321a70af4b96ffcfbd0d57fec, type: 3}
+  m_Script: {fileID: 11500000, guid: e6c73419debd81347ab213ef1e2b8e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 3, y: -0.5}
+  kaidan: {fileID: 1084204908}
 --- !u!212 &1076518239
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1276,7 +1276,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1084204908
 GameObject:
@@ -1386,10 +1386,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1084204908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc07287321a70af4b96ffcfbd0d57fec, type: 3}
+  m_Script: {fileID: 11500000, guid: e6c73419debd81347ab213ef1e2b8e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 3, y: 1.5}
+  kaidan: {fileID: 1076518236}
 --- !u!1001 &1098259278
 Prefab:
   m_ObjectHideFlags: 0
