@@ -30,17 +30,17 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             key = -1;
-            animator.SetTrigger("WalkTrigger");
+            animator.SetTrigger("WalkTrigger");          
         }
 
         //待機
-        if (key == 0 && karuikagu.parents_set == false)
+        if (key == 0&&karuikagu.parents_set == false)
         {
-            animator.SetTrigger("Stand-byTrigger");
-
             //滑らないように
-            rigid2D.velocity = new Vector2(0, -10);
-        }
+            rigid2D.velocity = new Vector2(0, -20);
+
+            animator.SetTrigger("Stand-byTrigger");
+        }      
 
         //プレイヤの移動速度
         float speedx = Mathf.Abs(rigid2D.velocity.x);
@@ -58,9 +58,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         //速度に応じてアニメーション速度を変える
-        animator.speed = speedx / 2.0f;
-
-        
+        animator.speed = speedx / 2.0f;      
     }
     
 }

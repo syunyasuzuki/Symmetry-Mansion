@@ -21,6 +21,6 @@ public class GameDirector : MonoBehaviour {
 
     public void DecreasS()
     {
-        SGauge.GetComponent<Image>().fillAmount -= 0.0001f;
+        SGauge.GetComponent<Image>().fillAmount -= 0.00010f;
     }
 }
