@@ -1478,7 +1478,7 @@ Prefab:
     - target: {fileID: 212223368359712048, guid: 0058f46411c4e4c49bd3230b2b46d4b9,
         type: 2}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0058f46411c4e4c49bd3230b2b46d4b9, type: 2}
@@ -1561,7 +1561,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1240954201
 RectTransform:
