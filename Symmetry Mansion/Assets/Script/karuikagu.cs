@@ -7,62 +7,29 @@ public class karuikagu : MonoBehaviour
 
     public GameObject Player;
     public GameObject kagu;
-    public bool motu_set;
     public static bool parents_set;
-    public bool play_set;
 
     // Use this for initialization
     void Start()
-    {
-        //持つsetはfalseでスタート
-        motu_set = false;
-
-        parents_set = false;
-
-        play_set = false;
-
-      
-
+    {     
+        parents_set = false;           
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (play_set == true)
-        {
-            //Zキーが押された時
-            if (Input.GetKey(KeyCode.Z))
-            {
-                //motu_set起動
-                motu_set = true;
-            }
-        }
 
 
         //プレイヤと親子関係の時
         if (kagu.transform.parent == Player.transform)
         {
             //スタミナゲージを減らす
-            //GameObject director = GameObject.Find("GameDirector");
-            //director.GetComponent<GameDirector>().DecreasS();
+            GameObject director = GameObject.Find("GameDirector");
+            director.GetComponent<GameDirector>().DecreasS();
 
             //Zキーが押されていない時
             if (Input.GetKeyUp(KeyCode.Z))
-            {
-                //motu_set起動しない
-                motu_set = false;
-
-                //GameObject director = GameObject.Find("GameDirector");
-                //director.GetComponent<GameDirector>().DecreasS();
-
-                //if (motu_set == false)
-                //{
-                //    //親子関係解除
-                //    kagu.transform.parent = null;
-
-                //    parents_set = false;
-                //}
-
+            {           
                 //親子関係解除
                 kagu.transform.parent = null;
 
@@ -74,30 +41,18 @@ public class karuikagu : MonoBehaviour
     void OnTriggerStay2D(Collider2D col)
     {
         //プレイヤtagに触れているとき
-        if (col.gameObject.tag == "Player"&& parents_set == false)
+        if (col.gameObject.tag == "Player" && parents_set == false)
         {
-            play_set = true;
-        }
-       
-        
-        if (parents_set == false&& play_set == true)
-        {
-            //プレイヤtagに触れているとき
-            if (motu_set == true && col.gameObject.tag == "Player" && parents_set == false)
+            if (Input.GetKey(KeyCode.Z))
             {
-                //家具の向き（ベクトル）を取得
-                Vector3 pos = transform.position + transform.forward;
-
                 //親子関係
                 kagu.transform.parent = Player.transform;
 
-                parents_set = true;
-            }           
-        }
-    }
+                //家具の向き（ベクトル）を取得
+                Vector3 pos = transform.position + transform.forward;
 
-    void OnTriggerExit2D(Collider2D col)
-    {
-        play_set = false;           
+                parents_set = true;
+            }
+        }
     }
 }
