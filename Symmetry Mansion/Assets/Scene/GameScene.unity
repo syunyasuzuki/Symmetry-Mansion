@@ -2172,19 +2172,19 @@ MonoBehaviour:
   x_Multipel: []
   x_total: []
   y_Multipel: []
-  Kagu: []
-  kagu: {fileID: 1728775541}
-  kagu2: {fileID: 1040877850}
-  kagu3: {fileID: 150291196}
-  kagu4: {fileID: 1880944232}
-  kagu5: {fileID: 1082342269}
-  kagu6: {fileID: 1498107}
-  kagu7: {fileID: 403444644}
-  kagu8: {fileID: 1459407479}
-  kagu9: {fileID: 624733473}
-  kagu10: {fileID: 1326117143}
-  kagu11: {fileID: 1167160817}
-  kagu12: {fileID: 1106663585}
+  Kagu:
+  - {fileID: 1728775541}
+  - {fileID: 1040877850}
+  - {fileID: 150291196}
+  - {fileID: 1880944232}
+  - {fileID: 1082342269}
+  - {fileID: 1498107}
+  - {fileID: 403444644}
+  - {fileID: 1459407479}
+  - {fileID: 624733473}
+  - {fileID: 1326117143}
+  - {fileID: 1167160817}
+  - {fileID: 1106663585}
 --- !u!4 &1854959656
 Transform:
   m_ObjectHideFlags: 0

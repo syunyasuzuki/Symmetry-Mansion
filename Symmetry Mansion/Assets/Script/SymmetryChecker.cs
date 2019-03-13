@@ -12,18 +12,6 @@ public class SymmetryChecker : MonoBehaviour {
     Vector2[] pos;            //座標を取得
     public GameObject[] Kagu;
     public static bool Symmetry;
-    public GameObject kagu1;
-    public GameObject kagu2;
-    public GameObject kagu3;
-    public GameObject kagu4;
-    public GameObject kagu5;
-    public GameObject kagu6;
-    public GameObject kagu7;
-    public GameObject kagu8;
-    public GameObject kagu9;
-    public GameObject kagu10;
-    public GameObject kagu11;
-    public GameObject kagu12;
 
     // Use this for initialization
     void Start () {
@@ -54,16 +42,23 @@ public class SymmetryChecker : MonoBehaviour {
             y_Multipel[i] = pos[i].y;
 
         }
-
-        x_total[0] = x_Multipel[0] + x_Multipel[1];//x座標の計算
-        if (-0.3f <= x_total[0] && x_total[0] <= 0.3)//-0.3または0.3の誤差内であればシンメトリーになる
+        for(int j = 0; j > Kagu.Length; j++)
         {
-            Symmetry = true;
+            if (j % 2 == 0)
+            {
+                x_total[j] = x_Multipel[j] + x_Multipel[j + 1];
+            }
         }
-        else
+        for(int k = 0; k < x_total.Length; k++)
         {
-            Symmetry = false;
+            if (-0.3f <= x_total[0] && x_total[0] <= 0.3)//-0.3または0.3の誤差内であればシンメトリーになる
+            {
+                Symmetry = true;
+            }
+            else
+            {
+                Symmetry = false;
+            }
         }
-
     }
 }
