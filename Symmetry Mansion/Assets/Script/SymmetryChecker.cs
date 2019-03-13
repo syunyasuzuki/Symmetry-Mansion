@@ -20,15 +20,15 @@ public class SymmetryChecker : MonoBehaviour {
 
         //var strArray = new[] {GameObject.FindGameObjectsWithTag("Kagu")};
         //Array.Sort(strArray);
-        Kagu = GameObject.FindGameObjectsWithTag("Kagu");//KaguのタグでKaguのオブジェクトを取得
+        //Kagu = GameObject.FindGameObjectsWithTag("Kagu");//KaguのタグでKaguのオブジェクトを取得
         
         Symmetry = false;
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        check_count = 0;
 
         pos = new Vector2[Kagu.Length];     //Kaguの座標を取得
         x_Multipel = new float[Kagu.Length];//Kaguのx座標を取得
@@ -44,7 +44,7 @@ public class SymmetryChecker : MonoBehaviour {
             y_Multipel[i] = pos[i].y;
         }
 
-        for(int j = 0; j < Kagu.Length; j++)
+        for (int j = 0; j < Kagu.Length; j++)
         {
             if (j % 2 == 0)
             {
@@ -52,11 +52,12 @@ public class SymmetryChecker : MonoBehaviour {
             }
         }
 
-        for(int k = 0; k < x_total.Length; k++)
+        for (int k = 0; k < x_total.Length; k++)
         {
             if (-0.3f <= x_total[k] && x_total[k] <= 0.3)//-0.3または0.3の誤差内であればシンメトリーになる
             {
                 check_count++;
+                Debug.Log(check_count);
             }
         }
 
