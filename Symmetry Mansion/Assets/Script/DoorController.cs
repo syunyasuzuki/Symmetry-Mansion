@@ -18,7 +18,7 @@ public class DoorController : MonoBehaviour
 	}
     void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player"&&SymmetryChecker.Symmetry == true)
+        if (col.gameObject.tag == "Player")
         {
             open_set = true;
             Debug.Log("チェック");
@@ -37,19 +37,15 @@ public class DoorController : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        if (open_set == true && Input.GetKeyDown(KeyCode.UpArrow))
+        if (open_set == true && SymmetryChecker.Symmetry == true)
         {
-            animator.SetTrigger("Open");
-            //Get.Play();
-            Invoke("Next", 1.0f);
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                animator.SetTrigger("Open");
+                FadeController.isFade2 = true;
+                FadeController.isFadeOut2 = true;
+                //Get.Play();
+            }           
         }
 	}
-
-    private void Next()
-    {
-        FadeController.isFade2 = true;
-        FadeController.isFadeOut2 = true;
-
-        SceneManager.LoadScene("ClearScene");
-    }
 }
