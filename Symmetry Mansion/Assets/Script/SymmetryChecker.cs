@@ -13,6 +13,8 @@ public class SymmetryChecker : MonoBehaviour {
     public GameObject[] Kagu;
     public static bool Symmetry;
 
+    int check_count = 0;
+
     // Use this for initialization
     void Start () {
 
@@ -40,25 +42,27 @@ public class SymmetryChecker : MonoBehaviour {
             Kagu[i].transform.position = new Vector2(pos[i].x, pos[i].y);
             x_Multipel[i] = pos[i].x;
             y_Multipel[i] = pos[i].y;
-
         }
-        for(int j = 0; j > Kagu.Length; j++)
+
+        for(int j = 0; j < Kagu.Length; j++)
         {
             if (j % 2 == 0)
             {
                 x_total[j] = x_Multipel[j] + x_Multipel[j + 1];
             }
         }
+
         for(int k = 0; k < x_total.Length; k++)
         {
-            if (-0.3f <= x_total[0] && x_total[0] <= 0.3)//-0.3または0.3の誤差内であればシンメトリーになる
+            if (-0.3f <= x_total[k] && x_total[k] <= 0.3)//-0.3または0.3の誤差内であればシンメトリーになる
             {
-                Symmetry = true;
+                check_count++;
             }
-            else
-            {
-                Symmetry = false;
-            }
+        }
+
+        if (check_count == x_total.Length)
+        {
+            Symmetry = true;
         }
     }
 }
