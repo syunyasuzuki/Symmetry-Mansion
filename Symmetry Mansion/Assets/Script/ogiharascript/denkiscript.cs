@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class denkiscript : MonoBehaviour {
        
-    public static bool lever_set; //レバー    
+    public static bool lever_set; //レバーのON,OFF
+    
     void Start()
     {
         lever_set = false;       
