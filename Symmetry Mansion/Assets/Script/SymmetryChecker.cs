@@ -54,7 +54,7 @@ public class SymmetryChecker : MonoBehaviour {
 
         for (int k = 0; k < x_total.Length; k++)
         {
-            if (-0.3f <= x_total[k] && x_total[k] <= 0.3)//-0.3または0.3の誤差内であればシンメトリーになる
+            if (-0.1f <= x_total[k] && x_total[k] <= 0.1)//-0.3または0.3の誤差内であればシンメトリーになる
             {
                 check_count++;
                 Debug.Log(check_count);
