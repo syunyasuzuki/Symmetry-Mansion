@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Elevatorscript : MonoBehaviour {
 
-    bool Elevator_set;
+    bool Elevator_set;//エレベータの電源を判定するやつ
     // Use this for initialization
     void Start () {
         Elevator_set = false;
