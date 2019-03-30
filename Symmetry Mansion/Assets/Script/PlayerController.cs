@@ -2,39 +2,70 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
-
+public class PlayerController : MonoBehaviour
+{
     Rigidbody2D rigid2D;
     Animator animator;
     float walkForce = 20.0f;
-    float maxWalkSpeed = 1.5f;
+    float maxWalkSpeed = 1.5f;  
 
+    public AudioClip Walk_SE;  //歩くSEを入れる箱
+    AudioSource Audio;         //SEを再生させるためのスイッチ
+    int walk_count;            //walk_SEの再生頻度を調整するための変数
 
     // Use this for initialization
-    void Start () {
-        rigid2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();     
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    void Start ()
     {
+        rigid2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+
+        Audio = GetComponent<AudioSource>();
+        Audio.clip = Walk_SE;
+	}
+
+    //アニメーションに合わせてSEを再生させるメソッド
+    void walk_SE()
+    {
+        Audio.PlayOneShot(Walk_SE);
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        walk_count = 0;
         //左右移動
         int key = 0;
         if (Input.GetKey(KeyCode.RightArrow)) 
         {
+            walk_count++;
             key = 1;
             animator.SetTrigger("WalkTrigger");
+
+            //walk_countが10になったらwalk_SEメソッドを呼ぶ
+            if (walk_count == 10)
+            {
+                walk_SE();
+                walk_count = 0;   //walk_countリセット
+            }
+            
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
+            walk_count--;
             key = -1;
-            animator.SetTrigger("WalkTrigger");          
+            animator.SetTrigger("WalkTrigger");
+
+            //walk_countが-10になったらwalk_SEメソッドを呼ぶ
+            if (walk_count == -10)
+            {
+                walk_SE();
+                walk_count = 0;   //walk_countリセット
+            }
         }
 
         //親子関係を持っていないとき
-        if (key==0&&karuikagu.parents_set == false)
+        if (key == 0 && karuikagu.parents_set == false)
         {       
             animator.SetTrigger("Stand-byTrigger");
         }
