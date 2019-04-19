@@ -37,7 +37,7 @@ public class DoorController : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        if (open_set == true && SymmetryChecker.Symmetry == true)
+        if (open_set == true && SymmetryChecker.Symmetry_check == true)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
