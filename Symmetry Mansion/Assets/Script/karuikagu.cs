@@ -10,7 +10,7 @@ public class karuikagu : MonoBehaviour
     //public GameObject kagu;
     //public static bool parents_set;
 
-    public static bool playertouch;
+    //public static bool playertouch;
     public static string kagu_name;
     public static bool kagutouch;
 
@@ -19,7 +19,7 @@ public class karuikagu : MonoBehaviour
     {
         //parents_set = false;   
 
-        playertouch = false;
+        //playertouch = false;
         kagutouch = false;
     }
 
@@ -72,11 +72,6 @@ public class karuikagu : MonoBehaviour
 
             //PlayerController._child.GetComponent<Renderer>().sortingOrder = 5;
         }
-        else
-        {
-            kagutouch = false;
-
-        }
 
         if (col.gameObject.tag == "Player")
         {
@@ -84,11 +79,11 @@ public class karuikagu : MonoBehaviour
             {
                 kagu_name = transform.name;
 
-                playertouch = true;
+                //playertouch = true;
             }
             else
             {
-                playertouch = false;
+                //playertouch = false;
             }
         }
     }
@@ -96,6 +91,6 @@ public class karuikagu : MonoBehaviour
     void OnTriggerExit2D(Collider2D col)
     {
         kagutouch = false;
-        playertouch = false;
+        //playertouch = false;
     }
 }

@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
 
         if (!parents_set)
         {
-            if (Input.GetKey(KeyCode.Z) && karuikagu.playertouch)
+            if (Input.GetKey(KeyCode.Z) /*&& /*karuikagu.playertouch*/)
             {
                 //親子関係
                 GameObject.Find(karuikagu.kagu_name).transform.parent = transform;
