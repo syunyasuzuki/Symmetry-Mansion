@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     public static GameObject _child;
 
+    int z = 0;
+
     // Use this for initialization
     void Start()
     {
@@ -108,23 +110,34 @@ public class PlayerController : MonoBehaviour
 
         if (!parents_set)
         {
-            if (Input.GetKey(KeyCode.Z) /*&& /*karuikagu.playertouch*/)
+            if (Input.GetKeyDown(KeyCode.Z) && karuikagu.playertouch)
             {
-                //親子関係
-                GameObject.Find(karuikagu.kagu_name).transform.parent = transform;
+                z++;
+                Debug.Log(z);
 
-                //家具の向き（ベクトル）を取得
-                Vector3 pos = transform.position + transform.forward;
+                if (z >= 1)
+                {
+                    //親子関係
+                    GameObject.Find(karuikagu.kagu_name).transform.parent = transform;
 
-                _child = transform.Find(karuikagu.kagu_name).gameObject;
+                    ////家具の向き（ベクトル）を取得
+                    //Vector3 pos = transform.position + transform.forward;
 
-                parents_set = true;
+                    //子オブジェクトを取得
+                    _child = transform.Find(karuikagu.kagu_name).gameObject;
 
-                Debug.Log("持つ");
+                    parents_set = true;
 
-                karuikagu.kagu_name = null;
+                    Debug.Log("持つ");
 
-                _child.GetComponent<Renderer>().sortingOrder = 5;
+                    //karuikagu.kagu_name = null;
+
+                    //子オブジェクトのレイヤーを上げる
+                    _child.GetComponent<Renderer>().sortingOrder = 5;
+
+                    //z = 0;
+                    Debug.Log(z);
+                }
 
             }
         }
@@ -137,18 +150,27 @@ public class PlayerController : MonoBehaviour
             if (!karuikagu.kagutouch)
             {
                 //Zキーが押された時
-                if (Input.GetKeyDown(KeyCode.X))
+                if (Input.GetKeyDown(KeyCode.Z))
                 {
-                    for (int i = 0; i < kagu.Length; i++)
+                    z = 0;
+                    if (z == 0)
                     {
-                        Debug.Log("降ろす");
-                        //親子関係解除
-                        kagu[i].transform.parent = null;
+                        for (int i = 0; i < kagu.Length; i++)
+                        {
+                            Debug.Log("降ろす");
+                            //親子関係解除
+                            kagu[i].transform.parent = null;
 
-                        parents_set = false;
+                            parents_set = false;
 
-                        _child.GetComponent<Renderer>().sortingOrder = 1;
+                            //子オブジェクトのレイヤーを下げる
+                            _child.GetComponent<Renderer>().sortingOrder = 1;
+
+                            Debug.Log(z);
+                        }
+
                     }
+
                 }
             }
 
@@ -160,6 +182,7 @@ public class PlayerController : MonoBehaviour
     {
         rigid2D.velocity = Vector2.zero;
         //rigid2D.angularVelocity = Vector2.zero;
+
     }
 
 

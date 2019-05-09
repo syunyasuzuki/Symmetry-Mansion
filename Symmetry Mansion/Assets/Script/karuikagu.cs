@@ -10,7 +10,7 @@ public class karuikagu : MonoBehaviour
     //public GameObject kagu;
     //public static bool parents_set;
 
-    //public static bool playertouch;
+    public static bool playertouch;
     public static string kagu_name;
     public static bool kagutouch;
 
@@ -79,11 +79,12 @@ public class karuikagu : MonoBehaviour
             {
                 kagu_name = transform.name;
 
-                //playertouch = true;
+                playertouch = true;
             }
             else
             {
-                //playertouch = false;
+                playertouch = false;
+                kagu_name = null;
             }
         }
     }
@@ -91,6 +92,6 @@ public class karuikagu : MonoBehaviour
     void OnTriggerExit2D(Collider2D col)
     {
         kagutouch = false;
-        //playertouch = false;
+        playertouch = false;
     }
 }
