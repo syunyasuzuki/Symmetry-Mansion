@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 220332056}
   - component: {fileID: 220332059}
   m_Layer: 0
-  m_Name: kaidan1 (1)
+  m_Name: kaidan1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -596,17 +596,13 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114458309066285062, guid: baf190b7632a72948a975899c34d8248,
-        type: 2}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 1208960121}
     - target: {fileID: 212960916778015664, guid: baf190b7632a72948a975899c34d8248,
         type: 2}
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114458309066285062, guid: baf190b7632a72948a975899c34d8248, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: baf190b7632a72948a975899c34d8248, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &334899449
@@ -647,6 +643,10 @@ Prefab:
     - target: {fileID: 4281177008826234, guid: 83f50d2e03c46634bb3643051901ac35, type: 2}
       propertyPath: m_RootOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1021052221134290, guid: 83f50d2e03c46634bb3643051901ac35, type: 2}
+      propertyPath: m_TagString
+      value: Player2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83f50d2e03c46634bb3643051901ac35, type: 2}
@@ -1012,7 +1012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &869241591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,7 +1145,8 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114532813858128640, guid: 8fc73b11fc3f43c4e817775e9f5ad8cc, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8fc73b11fc3f43c4e817775e9f5ad8cc, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &900957617
@@ -1326,10 +1327,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076518236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6c73419debd81347ab213ef1e2b8e9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 544af5e9746a30b4eacca16cd7923426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaidan: {fileID: 1084204908}
+  kaidan2: {fileID: 1084204908}
 --- !u!212 &1076518239
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1404,7 +1405,7 @@ GameObject:
   - component: {fileID: 1084204909}
   - component: {fileID: 1084204912}
   m_Layer: 0
-  m_Name: kaidan1
+  m_Name: kaidan1(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1500,10 +1501,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1084204908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6c73419debd81347ab213ef1e2b8e9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 544af5e9746a30b4eacca16cd7923426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaidan: {fileID: 1076518236}
+  kaidan2: {fileID: 1076518236}
 --- !u!1001 &1098259278
 Prefab:
   m_ObjectHideFlags: 0
