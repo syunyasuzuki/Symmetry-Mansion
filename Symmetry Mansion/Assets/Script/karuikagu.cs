@@ -66,6 +66,7 @@ public class karuikagu : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
+        //家具tagと触れたとき
         if (col.gameObject.tag == "Kagu")
         {
             kagutouch = true;
@@ -73,10 +74,12 @@ public class karuikagu : MonoBehaviour
             //PlayerController._child.GetComponent<Renderer>().sortingOrder = 5;
         }
 
+        //プレイヤtagと触れたとき
         if (col.gameObject.tag == "Player")
         {
             if (Input.GetKey(KeyCode.Z) && !PlayerController.parents_set)
             {
+                //kagu_nameに格納する
                 kagu_name = transform.name;
 
                 playertouch = true;
