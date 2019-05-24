@@ -1554,6 +1554,12 @@ Prefab:
       propertyPath: Walk_SE
       value: 
       objectReference: {fileID: 8300000, guid: dcc4b5d92f7e875408f29a4ca8b7aff5, type: 3}
+    - target: {fileID: 212543538484993878, guid: 0058f46411c4e4c49bd3230b2b46d4b9,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: db41c3999d0f0c84297420f6c9da1867,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0058f46411c4e4c49bd3230b2b46d4b9, type: 2}
   m_IsPrefabParent: 0
