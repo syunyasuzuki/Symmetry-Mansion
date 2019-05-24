@@ -1557,6 +1557,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0058f46411c4e4c49bd3230b2b46d4b9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1098883132
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4324809818046282, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.6747603
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324809818046282, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.123
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324809818046282, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324809818046282, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324809818046282, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324809818046282, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324809818046282, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324809818046282, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1106663585 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1153591543867236, guid: 5f9b93f7d20182e4f8ad5d5b1a092c35,
@@ -1739,7 +1781,7 @@ RectTransform:
   m_Children:
   - {fileID: 1836584158}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

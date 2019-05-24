@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour
 
     public static GameObject _child;
 
-    int z = 0;  //zキーで持つ降ろすを区別
+
+
+    int z = 0;
 
     // Use this for initialization
     void Start()
@@ -118,7 +120,6 @@ public class PlayerController : MonoBehaviour
             {
                 z++;
 
-                //Zが１以上の時
                 if (z >= 1)
                 {
                     //親子関係
@@ -139,22 +140,22 @@ public class PlayerController : MonoBehaviour
 
                     if (muki_set)
                     {
-                        //プレイヤと家具の座標を取得
                         Vector3 tmp = GameObject.Find("Player").transform.position;
                         Vector3 tmp2 = GameObject.Find(karuikagu.kagu_name).transform.position;
-                        //子オブジェクトにプレイヤと家具の座標を代入
+                        //GameObject.Find(karuikagu.kagu_name).transform.position
+                        //    = new Vector3(tmp.x + 0.3f, tmp2.y, tmp2.z);
                         GameObject.Find(karuikagu.kagu_name).transform.position
-                            = new Vector3(tmp.x + 0.3f, tmp2.y, tmp2.z);
+                            = new Vector3(tmp.x, tmp2.y, tmp.z);
                         Debug.Log("右");
                     }
                     else
                     {
-                        //プレイヤと家具の座標を取得
                         Vector3 tmp = GameObject.Find("Player").transform.position;
                         Vector3 tmp2 = GameObject.Find(karuikagu.kagu_name).transform.position;
-                        //子オブジェクトにプレイヤと家具の座標を代入
+                        //GameObject.Find(karuikagu.kagu_name).transform.position
+                        //    = new Vector3(tmp.x - 0.3f, tmp2.y, tmp2.z);
                         GameObject.Find(karuikagu.kagu_name).transform.position
-                            = new Vector3(tmp.x - 0.3f, tmp2.y, tmp2.z);
+                            = new Vector3(tmp.x, tmp2.y, tmp.z);
                         Debug.Log("左");
                     }
                 }
@@ -170,8 +171,6 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Z))
                 {
                     z = 0;
-
-                    //zが０の時
                     if (z == 0)
                     {
                         for (int i = 0; i < kagu.Length; i++)

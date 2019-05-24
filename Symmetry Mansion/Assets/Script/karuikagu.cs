@@ -13,10 +13,13 @@ public class karuikagu : MonoBehaviour
     public static bool playertouch;
     public static string kagu_name;
     public static bool kagutouch;
+    public GameObject carsor;
 
     // Use this for initialization
     void Start()
     {
+        carsor = GameObject.FindGameObjectWithTag("carsor");
+
         //parents_set = false;   
 
         //playertouch = false;
@@ -77,18 +80,30 @@ public class karuikagu : MonoBehaviour
         //プレイヤtagと触れたとき
         if (col.gameObject.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.Z) && !PlayerController.parents_set)
+            if (!PlayerController.parents_set)
             {
                 //kagu_nameに格納する
                 kagu_name = transform.name;
 
-                playertouch = true;
+                Vector3 tmp2 = GameObject.Find(kagu_name).transform.position;
+
+                carsor.transform.position
+                         = new Vector3(tmp2.x, tmp2.y + 0.4f, tmp2.z);
+
+                //子オブジェクトのレイヤーを上げる
+                carsor.GetComponent<Renderer>().sortingOrder = 5;
+
+                if (Input.GetKey(KeyCode.Z))
+                {
+                    playertouch = true;
+                }
+                else
+                {
+                    playertouch = false;
+                    kagu_name = null;
+                }
             }
-            else
-            {
-                playertouch = false;
-                kagu_name = null;
-            }
+
         }
     }
 
@@ -96,5 +111,8 @@ public class karuikagu : MonoBehaviour
     {
         kagutouch = false;
         playertouch = false;
+
+        //子オブジェクトのレイヤーを上げる
+        carsor.GetComponent<Renderer>().sortingOrder = -1;
     }
 }
