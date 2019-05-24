@@ -41,7 +41,8 @@ public class PlayerCon2 : MonoBehaviour
         {
             walk_count++;
             key = 1;
-            animator.SetTrigger("walkTrigger");
+            //animator.SetTrigger("walkTrigger");
+            animator.SetTrigger("Walk2Trigger");
             stop = true;
             //walk_countが10になったらwalk_SEメソッドを呼ぶ
             if (walk_count == 10)
@@ -56,7 +57,8 @@ public class PlayerCon2 : MonoBehaviour
         {
             walk_count--;
             key = -1;
-            animator.SetTrigger("walkTrigger");
+            //animator.SetTrigger("walkTrigger");
+            animator.SetTrigger("Walk2Trigger");
 
             //walk_countが-10になったらwalk_SEメソッドを呼ぶ
             if (walk_count == -10)
@@ -69,7 +71,8 @@ public class PlayerCon2 : MonoBehaviour
         //親子関係を持っていないとき
         if (key == 0 && karuikagu2.parents_set2 == false)
         {
-            animator.SetTrigger("stayTrigger");
+            //animator.SetTrigger("stayTrigger");
+            animator.SetTrigger("stand-by2Trigger");
         }
 
         if (key == 0)

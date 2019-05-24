@@ -648,6 +648,12 @@ Prefab:
       propertyPath: m_TagString
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 212668214572633758, guid: 83f50d2e03c46634bb3643051901ac35,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: db41c3999d0f0c84297420f6c9da1867,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83f50d2e03c46634bb3643051901ac35, type: 2}
   m_IsPrefabParent: 0
@@ -1560,6 +1566,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300002, guid: db41c3999d0f0c84297420f6c9da1867,
         type: 3}
+    - target: {fileID: 212543538484993878, guid: 0058f46411c4e4c49bd3230b2b46d4b9,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0058f46411c4e4c49bd3230b2b46d4b9, type: 2}
   m_IsPrefabParent: 0
