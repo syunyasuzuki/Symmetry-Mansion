@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Kagu
   - Player2
+  - carsor
+  - Kagu2
+  - carsor2
   layers:
   - Default
   - TransparentFX

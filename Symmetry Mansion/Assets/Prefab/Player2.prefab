@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d335f3cdff32a09448c7e8e3474285a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Walk_SE: {fileID: 0}
+  kagu2: []
 --- !u!212 &212668214572633758
 SpriteRenderer:
   m_ObjectHideFlags: 1

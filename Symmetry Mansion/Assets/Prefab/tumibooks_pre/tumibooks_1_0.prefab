@@ -78,10 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42904dce3e29274f93fcfc2bc1c3fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  kagu: {fileID: 1637178433986896}
-  motu_set: 0
-  play_set: 0
+  carsor: {fileID: 0}
 --- !u!212 &212960916778015664
 SpriteRenderer:
   m_ObjectHideFlags: 1

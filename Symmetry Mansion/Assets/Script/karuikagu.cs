@@ -70,7 +70,7 @@ public class karuikagu : MonoBehaviour
     void OnTriggerStay2D(Collider2D col)
     {
         //家具tagと触れたとき
-        if (col.gameObject.tag == "Kagu")
+        if (col.gameObject.tag == "Kagu"&& col.gameObject.tag == "Kagu2")
         {
             kagutouch = true;
 
