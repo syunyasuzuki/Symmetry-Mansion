@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: 0a8bc7d200e5966439d90e4445f11040
-timeCreated: 1559060314
+guid: 8633d9f6fafa7d144832810037786d59
+timeCreated: 1559061421
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Lamp_0
-    21300002: Lamp_1
+    21300000: Kabe_0
+    21300002: Kabe_1
+    21300004: Kabe_2
+    21300006: Kabe_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -113,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lamp_0
+      name: Kabe_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 11
-        width: 50
-        height: 50
+        x: 0
+        y: 0
+        width: 17
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,13 +129,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lamp_1
+      name: Kabe_1
       rect:
         serializedVersion: 2
-        x: 78
-        y: 11
-        width: 50
-        height: 50
+        x: 31
+        y: 0
+        width: 17
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Kabe_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 17
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Kabe_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 17
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
