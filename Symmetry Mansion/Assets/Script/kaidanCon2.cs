@@ -6,7 +6,8 @@ public class kaidanCon2 : MonoBehaviour
 {
 
     private GameObject Player2;
-    public GameObject kaidan2;
+    public GameObject kaidan2_up;
+    public GameObject kaidan2_down;
 
 
     //public float pos_x, pos_y;
@@ -31,13 +32,25 @@ public class kaidanCon2 : MonoBehaviour
             {
                 FadeController.isFade3 = true;
                 FadeController.isFadeOut3 = true;
-                Invoke("KaidanMove", 2);
+                Invoke("KaidanMove2_up", 2);
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                FadeController.isFade3 = true;
+                FadeController.isFadeOut3 = true;
+                Invoke("KaidanMove2_down", 2);
             }
         }
     }
-    void KaidanMove()
+    void KaidanMove2_up()
     {
-        Player2.transform.position = kaidan2.transform.position;
+        Player2.transform.position = kaidan2_up.transform.position;
+        FadeController.isFade3 = true;
+        FadeController.isFadeIn3 = true;
+    }
+    void KaidanMove2_down()
+    {
+        Player2.transform.position = kaidan2_down.transform.position;
         FadeController.isFade3 = true;
         FadeController.isFadeIn3 = true;
     }

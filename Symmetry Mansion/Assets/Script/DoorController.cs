@@ -21,7 +21,7 @@ public class DoorController : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             open_set = true;
-            Debug.Log("チェック");
+            //Debug.Log("チェック");
         }
         else
         {
