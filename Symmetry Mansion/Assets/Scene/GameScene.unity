@@ -593,6 +593,11 @@ Prefab:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.45
       objectReference: {fileID: 0}
+    - target: {fileID: 212668214572633758, guid: 83f50d2e03c46634bb3643051901ac35,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83f50d2e03c46634bb3643051901ac35, type: 2}
   m_IsPrefabParent: 0
@@ -612,7 +617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492ab88d58c19694db98ca3477a1c977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carsor2: {fileID: 0}
 --- !u!1001 &656687887
 Prefab:
   m_ObjectHideFlags: 0
@@ -1468,7 +1472,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492ab88d58c19694db98ca3477a1c977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carsor2: {fileID: 0}
 --- !u!1 &1208960121 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1653344467461510, guid: 0058f46411c4e4c49bd3230b2b46d4b9,
@@ -1568,7 +1571,7 @@ GameObject:
   - component: {fileID: 1271414988}
   m_Layer: 0
   m_Name: Door_Original_0
-  m_TagString: Untagged
+  m_TagString: Kagu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1945,7 +1948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492ab88d58c19694db98ca3477a1c977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carsor2: {fileID: 0}
 --- !u!1 &1854959654
 GameObject:
   m_ObjectHideFlags: 0

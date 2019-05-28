@@ -13,7 +13,7 @@ public class karuikagu : MonoBehaviour
     public static bool playertouch;
     public static string kagu_name;
     public static bool kagutouch;
-    public GameObject carsor;
+    GameObject carsor;
 
     // Use this for initialization
     void Start()
@@ -70,7 +70,7 @@ public class karuikagu : MonoBehaviour
     void OnTriggerStay2D(Collider2D col)
     {
         //家具tagと触れたとき
-        if (col.gameObject.tag == "Kagu"&& col.gameObject.tag == "Kagu2")
+        if (col.gameObject.tag == "Kagu"|| col.gameObject.tag == "Kagu2")
         {
             kagutouch = true;
 
@@ -112,7 +112,7 @@ public class karuikagu : MonoBehaviour
         kagutouch = false;
         playertouch = false;
 
-        //子オブジェクトのレイヤーを上げる
+        //カーソルのレイヤーを下げる
         carsor.GetComponent<Renderer>().sortingOrder = -1;
     }
 }
