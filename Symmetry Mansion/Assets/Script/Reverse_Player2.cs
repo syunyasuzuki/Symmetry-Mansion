@@ -48,6 +48,8 @@ public class Reverse_Player2 : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.X) && judg2 == true)
             {
+                FadeController.isFade3 = true;
+                FadeController.isFadeOut3 = true;
                 Invoke("judg_Portal", 0.75f);
             }
         }
@@ -55,6 +57,8 @@ public class Reverse_Player2 : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.X) && judg2 == true)
             {
+                FadeController.isFade3 = true;
+                FadeController.isFadeOut3 = true;
                 Invoke("judg_Portal2", 0.75f);
             }
         }
@@ -62,9 +66,13 @@ public class Reverse_Player2 : MonoBehaviour {
     void judg_Portal()
     {
         Player2.transform.position = Portal.transform.position;
+        FadeController.isFade3 = true;
+        FadeController.isFadeIn3 = true;
     }
     void judg_Portal2()
     {
         Player2.transform.position = Portal2.transform.position;
+        FadeController.isFade3 = true;
+        FadeController.isFadeIn3 = true;
     }
 }

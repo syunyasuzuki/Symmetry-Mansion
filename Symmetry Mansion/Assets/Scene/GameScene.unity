@@ -404,8 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c73419debd81347ab213ef1e2b8e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaidan_up: {fileID: 0}
-  kaidan_down: {fileID: 0}
+  kaidan_up: {fileID: 166987363}
+  kaidan_down: {fileID: 220332055}
 --- !u!61 &166987365
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -599,8 +599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c73419debd81347ab213ef1e2b8e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaidan_up: {fileID: 0}
-  kaidan_down: {fileID: 0}
+  kaidan_up: {fileID: 166987363}
+  kaidan_down: {fileID: 220332055}
 --- !u!1 &233502896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,8 +1309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544af5e9746a30b4eacca16cd7923426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaidan2_up: {fileID: 0}
-  kaidan2_down: {fileID: 0}
+  kaidan2_up: {fileID: 1076518236}
+  kaidan2_down: {fileID: 1084204908}
 --- !u!212 &1076518239
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1479,8 +1479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544af5e9746a30b4eacca16cd7923426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaidan2_up: {fileID: 0}
-  kaidan2_down: {fileID: 0}
+  kaidan2_up: {fileID: 1076518236}
+  kaidan2_down: {fileID: 1084204908}
 --- !u!1001 &1098259278
 Prefab:
   m_ObjectHideFlags: 0
