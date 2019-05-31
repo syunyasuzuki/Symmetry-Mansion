@@ -9,6 +9,7 @@ public class Reverse_Player4 : MonoBehaviour {
     public static GameObject Player2;
     public GameObject Portal3;
     public GameObject Portal4;
+    Animator animator;
     public static bool judg2;//入れ替わる際の判定用
     public static bool Ma;
 
@@ -45,7 +46,7 @@ public class Reverse_Player4 : MonoBehaviour {
 
     void OnCollisionStay2D(Collision2D other)//入れ替わり
     {
-        if (Player2.transform.position.x <= 0)
+        if (Player2.transform.position.x < 0)
         {
             if (Input.GetKeyDown(KeyCode.X) && judg2 == true)
             {
@@ -54,7 +55,7 @@ public class Reverse_Player4 : MonoBehaviour {
                 Invoke("judg_Portal", 0.75f);
             }
         }
-        if (Player2.transform.position.x >= 0)
+        if (Player2.transform.position.x > 0)
         {
             if (Input.GetKeyDown(KeyCode.X) && judg2 == true)
             {

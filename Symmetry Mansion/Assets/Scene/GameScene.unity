@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &69162787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -795,7 +795,8 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114959296115840892, guid: 83f50d2e03c46634bb3643051901ac35, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 83f50d2e03c46634bb3643051901ac35, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &414904919
@@ -1049,6 +1050,23 @@ Transform:
   m_Father: {fileID: 441348381}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &684411027 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1021052221134290, guid: 83f50d2e03c46634bb3643051901ac35,
+    type: 2}
+  m_PrefabInternal: {fileID: 334899449}
+--- !u!114 &684411029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 684411027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d335f3cdff32a09448c7e8e3474285a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kagu2: []
 --- !u!1 &715579601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,9 +1272,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 986508925}
+  - component: {fileID: 986508926}
   - component: {fileID: 986508928}
   - component: {fileID: 986508927}
-  - component: {fileID: 986508926}
   m_Layer: 0
   m_Name: judgwall2
   m_TagString: Untagged
@@ -1312,11 +1330,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 986508924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96f5ef02bcd8f1e4c998464fbbee9ca7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1060c16efd725d744863dedca1a67084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Portal3: {fileID: 1690273144}
-  Portal4: {fileID: 1440660209}
+  Portal: {fileID: 1690273144}
+  Portal2: {fileID: 1440660209}
 --- !u!114 &986508928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,11 +1343,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 986508924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c249e8b11f8424d8c1aca7c9518f0b, type: 3}
+  m_Script: {fileID: 11500000, guid: 495149d798e39d846b2de584350b6c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Portal3: {fileID: 1690273144}
-  Portal4: {fileID: 1440660209}
+  Portal: {fileID: 1690273144}
+  Portal2: {fileID: 1440660209}
 --- !u!1001 &1022874780
 Prefab:
   m_ObjectHideFlags: 0
