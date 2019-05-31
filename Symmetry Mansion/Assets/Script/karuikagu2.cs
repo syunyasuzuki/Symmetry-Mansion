@@ -20,6 +20,7 @@ public class karuikagu2 : MonoBehaviour
     void Start()
     {
         carsor2 = GameObject.FindGameObjectWithTag("carsor2");
+        animator = GetComponent<Animator>();
 
         //parents_set = false;   
 
@@ -48,11 +49,12 @@ public class karuikagu2 : MonoBehaviour
 
         //}
 
-        if (transform.position.x <= 0)
+        if (transform.position.x < 0)
         {
             animator.SetTrigger("mirrorTrigger");
         }
-        else if (transform.position.x >= 0)
+
+        if (transform.position.x > 0) 
         {
             animator.SetTrigger("realTrigger");
         }
