@@ -29,11 +29,11 @@ public class Reverse_Player3 : MonoBehaviour {
         {
             Debug.Log("Player " + judg);
         }
-        if (Reverse_Player4.Player2.transform.position.x < 0.20f)
+        if (Reverse_Player4.Player2.transform.position.x < 0.2f)
         {
             judg = true;
         }
-        if (Reverse_Player4.Player2.transform.position.x < -0.20f)
+        if (Reverse_Player4.Player2.transform.position.x < -0.2f)
         {
             judg = true;
         }

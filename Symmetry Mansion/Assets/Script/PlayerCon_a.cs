@@ -33,7 +33,7 @@ public class PlayerCon_a : MonoBehaviour {
         parents_set2 = false;
         muki_set2 = false;
         Player2 = GameObject.Find("Player2");
-        GetComponent<PlayerCon_a>().enabled = false;
+        //GetComponent<PlayerCon_a>().enabled = false;
     }
 
 
@@ -41,20 +41,21 @@ public class PlayerCon_a : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Player2.transform.position.y < 0)
-        {
-            GetComponent<PlayerCon_a>().enabled = true;
-        }
-        else if (Player2.transform.position.y < 0)
-        {
-            GetComponent<PlayerCon_a>().enabled = false;
-        }
+        //if (Player2.transform.position.y < 0)
+        //{
+        //    GetComponent<PlayerCon_a>().enabled = true;
+        //}
+        //else if (Player2.transform.position.y < 0)
+        //{
+        //    GetComponent<PlayerCon_a>().enabled = false;
+        //}
         stop = false;
         //左右移動
         int key = 0;
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             key = 1;
+
             if (Reverse_Player4.Ma)
             {
                 animator.SetTrigger("walkTrigger");
@@ -63,6 +64,7 @@ public class PlayerCon_a : MonoBehaviour {
             {
                 animator.SetTrigger("Walk2Trigger");
             }
+
 
             muki_set2 = true;
             stop = true;
@@ -72,6 +74,7 @@ public class PlayerCon_a : MonoBehaviour {
         {
 
             key = -1;
+
             if (Reverse_Player4.Ma)
             {
                 animator.SetTrigger("walkTrigger");
@@ -80,6 +83,7 @@ public class PlayerCon_a : MonoBehaviour {
             {
                 animator.SetTrigger("Walk2Trigger");
             }
+
             muki_set2 = false;
 
         }
@@ -87,6 +91,7 @@ public class PlayerCon_a : MonoBehaviour {
         //親子関係を持っていないとき
         if (key == 0 /*&& !parents_set2*/)
         {
+
             if (Reverse_Player4.Ma)
             {
                 animator.SetTrigger("stayTrigger");
@@ -95,6 +100,7 @@ public class PlayerCon_a : MonoBehaviour {
             {
                 animator.SetTrigger("stand-by2Trigger");
             }
+
 
         }
 
