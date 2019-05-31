@@ -13,6 +13,7 @@ public class PlayerCon2 : MonoBehaviour
     public static bool parents_set2;
     public static bool lag2;
     public static bool muki_set2;
+    public static bool mp_set;
 
     public static GameObject _child;
     private bool stop;
@@ -32,6 +33,8 @@ public class PlayerCon2 : MonoBehaviour
         parents_set2 = false;
         muki_set2 = false;
 
+        mp_set = true;
+
 
     }
 
@@ -44,10 +47,17 @@ public class PlayerCon2 : MonoBehaviour
         //左右移動
         int key = 0;
         if (Input.GetKey(KeyCode.LeftArrow))
-        {
-        
+        {    
             key = 1;
-            animator.SetTrigger("walkTrigger");
+            if (mp_set)
+            {
+                animator.SetTrigger("walkTrigger");
+            }
+            else
+            {
+                animator.SetTrigger("Walk2Trigger");
+            }
+            
             muki_set2 = true;
             stop = true;
         }
@@ -56,7 +66,14 @@ public class PlayerCon2 : MonoBehaviour
         {
            
             key = -1;
-            animator.SetTrigger("walkTrigger");
+            if (mp_set)
+            {
+                animator.SetTrigger("walkTrigger");
+            }
+            else
+            {
+                animator.SetTrigger("Walk2Trigger");
+            }
             muki_set2 = false;
 
         }
@@ -64,7 +81,15 @@ public class PlayerCon2 : MonoBehaviour
         //親子関係を持っていないとき
         if (key == 0 && !parents_set2)
         {
-            animator.SetTrigger("stayTrigger");
+            if (!Reverse_Player2.MA)
+            {
+                animator.SetTrigger("stayTrigger");
+            }
+            else
+            {
+                animator.SetTrigger("stand-by2Trigger");
+            }
+            
         }
 
         if (key == 0)
@@ -176,6 +201,20 @@ public class PlayerCon2 : MonoBehaviour
         rigid2D.velocity = Vector2.zero;
         //rigid2D.angularVelocity = Vector2.zero;
 
+    }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Mirror")
+        {
+            mp_set = true;
+        }
+        
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        mp_set = false;
     }
 
 

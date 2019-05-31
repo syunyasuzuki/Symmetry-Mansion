@@ -9,6 +9,8 @@ public class Reverse_Player2 : MonoBehaviour {
     public GameObject Portal;
     public GameObject Portal2;
     public static bool judg2;//入れ替わる際の判定用
+    Animator animator;
+    public static bool MA;
 
     // Use this for initialization
     void Start()
@@ -16,7 +18,7 @@ public class Reverse_Player2 : MonoBehaviour {
         Portal = GameObject.Find("Portal");
         Portal2 = GameObject.Find("Portal2");
         Player2 = GameObject.Find("Player2");
-
+        MA = false;
     }
 
     // Update is called once per frame
@@ -48,8 +50,6 @@ public class Reverse_Player2 : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.X) && judg2 == true)
             {
-                FadeController.isFade3 = true;
-                FadeController.isFadeOut3 = true;
                 Invoke("judg_Portal", 0.75f);
             }
         }
@@ -57,8 +57,6 @@ public class Reverse_Player2 : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.X) && judg2 == true)
             {
-                FadeController.isFade3 = true;
-                FadeController.isFadeOut3 = true;
                 Invoke("judg_Portal2", 0.75f);
             }
         }
@@ -66,13 +64,14 @@ public class Reverse_Player2 : MonoBehaviour {
     void judg_Portal()
     {
         Player2.transform.position = Portal.transform.position;
-        FadeController.isFade3 = true;
-        FadeController.isFadeIn3 = true;
+
+        MA = true;
+     
     }
     void judg_Portal2()
     {
         Player2.transform.position = Portal2.transform.position;
-        FadeController.isFade3 = true;
-        FadeController.isFadeIn3 = true;
+
+        MA = false;
     }
 }
