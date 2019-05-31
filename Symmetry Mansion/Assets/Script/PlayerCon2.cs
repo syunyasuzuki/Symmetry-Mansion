@@ -259,6 +259,13 @@ public class PlayerCon2 : MonoBehaviour
 
     }
 
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Door")
+        {
+            col.gameObject.GetComponent<DoorController>().open_set2 = true;
+        }
+    }
 
 
 }

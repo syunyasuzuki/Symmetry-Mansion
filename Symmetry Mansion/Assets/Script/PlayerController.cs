@@ -200,7 +200,11 @@ public class PlayerController : MonoBehaviour
         //rigid2D.angularVelocity = Vector2.zero;
 
     }
-
-
-
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Door")
+        {
+            col.gameObject.GetComponent<DoorController>().open_set1 = true;
+        }
+    }
 }
