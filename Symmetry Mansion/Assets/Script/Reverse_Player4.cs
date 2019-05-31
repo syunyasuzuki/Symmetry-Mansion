@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Reverse_Player2 : MonoBehaviour {
+public class Reverse_Player4 : MonoBehaviour {
+
 
 
     public static GameObject Player2;
-    public GameObject Portal;
-    public GameObject Portal2;
+    public GameObject Portal3;
+    public GameObject Portal4;
     public static bool judg2;//入れ替わる際の判定用
-    Animator animator;
     public static bool MA;
 
     // Use this for initialization
     void Start()
     {
-        Portal = GameObject.Find("Portal");
-        Portal2 = GameObject.Find("Portal2");
+        Portal3 = GameObject.Find("Portal3");
+        Portal4 = GameObject.Find("Portal4");
         Player2 = GameObject.Find("Player2");
-        MA = true;
+
     }
 
     // Update is called once per frame
@@ -31,16 +31,18 @@ public class Reverse_Player2 : MonoBehaviour {
         {
             Debug.Log("Player2 " + judg2);
         }
-        if (Reverse_Player.Player.transform.position.x > 0.2f)
+        if (Reverse_Player3.Player.transform.position.x > 0.20f)
         {
             judg2 = true;
         }
-        else if (Reverse_Player.Player.transform.position.x > -0.2f)
+        else if (Reverse_Player3.Player.transform.position.x > -0.20f)
         {
             judg2 = true;
         }
 
     }
+
+
     void OnCollisionStay2D(Collision2D other)//入れ替わり
     {
         if (Player2.transform.position.x >= 0)
@@ -62,27 +64,29 @@ public class Reverse_Player2 : MonoBehaviour {
             }
         }
     }
+    void OnTriggerExit2D(Collider2D other)
+    {
+    }
+
     void judg_Portal()
     {
-        Player2.transform.position = Portal.transform.position;
+        Player2.transform.position = Portal3.transform.position;
         MA = true;
         judg2 = false;
+        GetComponent<Reverse_Player4>().enabled = false;
         FadeController.isFade3 = true;
         FadeController.isFadeIn3 = true;
-        GetComponent<Reverse_Player2>().enabled = false;
-        GetComponent<Reverse_Player2>().enabled = true;
-        Debug.Log("T");
-     
+        GetComponent<Reverse_Player4>().enabled = true;
     }
     void judg_Portal2()
     {
-        Player2.transform.position = Portal2.transform.position;
+        Player2.transform.position = Portal4.transform.position;
         MA = false;
         judg2 = false;
+        GetComponent<Reverse_Player4>().enabled = false;
         FadeController.isFade3 = true;
         FadeController.isFadeIn3 = true;
-        GetComponent<Reverse_Player2>().enabled = false;
-        GetComponent<Reverse_Player2>().enabled = true;
-        Debug.Log("F");
+        GetComponent<Reverse_Player4>().enabled = true;
+
     }
 }

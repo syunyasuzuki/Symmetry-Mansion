@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Reverse_Player : MonoBehaviour {
-
+public class Reverse_Player3 : MonoBehaviour {
     public static GameObject Player;
-    public GameObject Portal;
-    public GameObject Portal2;
+    public GameObject Portal3;
+    public GameObject Portal4;
     public static bool judg;//入れ替わる際の判定用
 
 
     // Use this for initialization
     void Start()
     {
-        Portal = GameObject.Find("Portal");
-        Portal2 = GameObject.Find("Portal2");
+        Portal3 = GameObject.Find("Portal3");
+        Portal4 = GameObject.Find("Portal4");
         Player = GameObject.Find("Player");
 
     }
@@ -30,11 +29,11 @@ public class Reverse_Player : MonoBehaviour {
         {
             Debug.Log("Player " + judg);
         }
-        if (Reverse_Player2.Player2.transform.position.x < 0.20f)
+        if (Reverse_Player4.Player2.transform.position.x < 0.20f)
         {
             judg = true;
         }
-        else if (Reverse_Player2.Player2.transform.position.x < -0.20f)
+        if (Reverse_Player4.Player2.transform.position.x < -0.20f)
         {
             judg = true;
         }
@@ -67,22 +66,22 @@ public class Reverse_Player : MonoBehaviour {
     }
     void judg_Portal()
     {
-        Player.transform.position = Portal2.transform.position;
+        Player.transform.position = Portal4.transform.position;
         judg = false;
+        GetComponent<Reverse_Player3>().enabled = false;
         FadeController.isFade3 = true;
         FadeController.isFadeIn3 = true;
-        GetComponent<Reverse_Player>().enabled = false;
-        GetComponent<Reverse_Player>().enabled = true;
+        GetComponent<Reverse_Player3>().enabled = true;
 
     }
 
     void judg_Portal2()
     {
-        Player.transform.position = Portal.transform.position;
+        Player.transform.position = Portal3.transform.position;
         judg = false;
+        GetComponent<Reverse_Player3>().enabled = false;
         FadeController.isFade3 = true;
         FadeController.isFadeIn3 = true;
-        GetComponent<Reverse_Player>().enabled = false;
-        GetComponent<Reverse_Player>().enabled = true;
+        GetComponent<Reverse_Player3>().enabled = true;
     }
 }
