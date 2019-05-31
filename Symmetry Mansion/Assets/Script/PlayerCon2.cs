@@ -55,11 +55,7 @@ public class PlayerCon2 : MonoBehaviour
         int key = 0;
         if (Input.GetKey(KeyCode.LeftArrow))
         {    
-            key = 1;
-            if (Reverse_Player4.Ma)
-            {
-                animator.SetTrigger("walkTrigger");
-            }
+            key = 1;          
             if (Reverse_Player2.MA)
             {
                 animator.SetTrigger("walkTrigger");
@@ -73,15 +69,28 @@ public class PlayerCon2 : MonoBehaviour
             muki_set2 = true;
             stop = true;
         }
+        else if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            key = 1;
+            if (Reverse_Player4.Ma)
+            {
+                animator.SetTrigger("walkTrigger");
+            }         
+            else
+            {
+                animator.SetTrigger("Walk2Trigger");
+            }
+
+
+            muki_set2 = true;
+            stop = true;
+        }
 
         if (Input.GetKey(KeyCode.RightArrow)&& stop == false)
         {
            
             key = -1;
-            if (Reverse_Player4.Ma)
-            {
-                animator.SetTrigger("walkTrigger");
-            }           
+                    
             if (Reverse_Player2.MA)
             {
                 animator.SetTrigger("walkTrigger");
@@ -91,6 +100,22 @@ public class PlayerCon2 : MonoBehaviour
                 animator.SetTrigger("Walk2Trigger");
             }
           
+            muki_set2 = false;
+
+        }
+        else if (Input.GetKey(KeyCode.RightArrow) && stop == false)
+        {
+
+            key = -1;
+            if (Reverse_Player4.Ma)
+            {
+                animator.SetTrigger("walkTrigger");
+            }            
+            else
+            {
+                animator.SetTrigger("Walk2Trigger");
+            }
+
             muki_set2 = false;
 
         }
@@ -110,8 +135,17 @@ public class PlayerCon2 : MonoBehaviour
             {
                 animator.SetTrigger("stand-by2Trigger");
             }
-          
-
+        }
+        else if (key == 0 /*&& !parents_set2*/)
+        {
+            if (Reverse_Player4.Ma)
+            {
+                animator.SetTrigger("stayTrigger");
+            }            
+            else
+            {
+                animator.SetTrigger("stand-by2Trigger");
+            }
         }
 
         if (key == 0)
