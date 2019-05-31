@@ -210,8 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1060c16efd725d744863dedca1a67084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Portal: {fileID: 715579601}
-  Portal2: {fileID: 2019936666}
+  Portal: {fileID: 2019936666}
+  Portal2: {fileID: 715579601}
 --- !u!61 &141531541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -263,8 +263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495149d798e39d846b2de584350b6c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Portal: {fileID: 715579601}
-  Portal2: {fileID: 2019936666}
+  Portal: {fileID: 2019936666}
+  Portal2: {fileID: 715579601}
 --- !u!1 &154364099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,7 +1135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &869241591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1475,6 +1475,10 @@ Prefab:
     - target: {fileID: 4877290685620052, guid: 2fcc31a6ca3c66e4f97d2ce9a3cee136, type: 2}
       propertyPath: m_RootOrder
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877290685620052, guid: 2fcc31a6ca3c66e4f97d2ce9a3cee136, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fcc31a6ca3c66e4f97d2ce9a3cee136, type: 2}

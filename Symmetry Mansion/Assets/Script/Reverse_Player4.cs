@@ -45,18 +45,18 @@ public class Reverse_Player4 : MonoBehaviour {
 
     void OnCollisionStay2D(Collision2D other)//入れ替わり
     {
-        if (Player2.transform.position.x >= 0)
+        if (Player2.transform.position.x <= 0)
         {
-            if (other.gameObject.tag == "Player2" && judg2 == true)
+            if (Input.GetKeyDown(KeyCode.X) && judg2 == true)
             {
                 FadeController.isFade3 = true;
                 FadeController.isFadeOut3 = true;
                 Invoke("judg_Portal", 0.75f);
             }
         }
-        if (Player2.transform.position.x <= 0)
+        if (Player2.transform.position.x >= 0)
         {
-            if (other.gameObject.tag == "Player2" && judg2 == true)
+            if (Input.GetKeyDown(KeyCode.X) && judg2 == true)
             {
                 FadeController.isFade3 = true;
                 FadeController.isFadeOut3 = true;
