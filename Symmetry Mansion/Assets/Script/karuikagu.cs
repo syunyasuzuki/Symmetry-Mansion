@@ -14,11 +14,13 @@ public class karuikagu : MonoBehaviour
     public static string kagu_name;
     public static bool kagutouch;
     GameObject carsor;
+    Animator animator;
 
     // Use this for initialization
     void Start()
     {
         carsor = GameObject.FindGameObjectWithTag("carsor");
+        animator = GetComponent<Animator>();
 
         //parents_set = false;   
 
@@ -46,6 +48,16 @@ public class karuikagu : MonoBehaviour
         //    }
 
         //}
+
+        if (transform.position.x < 0)
+        {
+            animator.SetTrigger("mirrorTrigger");
+        }
+
+        if (transform.position.x > 0)
+        {
+            animator.SetTrigger("realTrigger");
+        }
     }
 
     //void OnTriggerStay2D(Collider2D col)
