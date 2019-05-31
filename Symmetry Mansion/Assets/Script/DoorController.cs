@@ -32,11 +32,11 @@ public class DoorController : MonoBehaviour
     //    }
     //}
 
-    //void OnTriggerExit2D(Collider2D col)
-    //{
-    //    open_set1 = false;
-    //    open_set2 = false;
-    //}
+    void OnTriggerExit2D(Collider2D col)
+    {
+        open_set1 = false;
+        open_set2 = false;
+    }
 
     // Update is called once per frame
     void Update ()
