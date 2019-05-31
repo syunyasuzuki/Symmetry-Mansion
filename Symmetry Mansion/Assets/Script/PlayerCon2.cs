@@ -75,7 +75,7 @@ public class PlayerCon2 : MonoBehaviour
         }
 
         //親子関係を持っていないとき
-        if (key == 0 && !parents_set2)
+        if (key == 0 /*&& !parents_set2*/)
         {
             if (Reverse_Player2.MA)
             {

@@ -14,6 +14,7 @@ public class karuikagu2 : MonoBehaviour
     public static string kagu_name2;
     public static bool kagutouch2;
     GameObject carsor2;
+    Animator animator;
 
     // Use this for initialization
     void Start()
@@ -46,6 +47,15 @@ public class karuikagu2 : MonoBehaviour
         //    }
 
         //}
+
+        if (transform.position.x <= 0)
+        {
+            animator.SetTrigger("mirrorTrigger");
+        }
+        else if (transform.position.x >= 0)
+        {
+            animator.SetTrigger("realTrigger");
+        }
     }
 
     //void OnTriggerStay2D(Collider2D col)
