@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCon2 : MonoBehaviour
-{
+public class PlayerCon_a : MonoBehaviour {
+
     Rigidbody2D rigid2D;
     Animator animator;
     float walkForce = 20.0f;
@@ -32,65 +32,54 @@ public class PlayerCon2 : MonoBehaviour
 
         parents_set2 = false;
         muki_set2 = false;
-
         Player2 = GameObject.Find("Player2");
+        GetComponent<PlayerCon_a>().enabled = false;
     }
 
-  
+
 
     // Update is called once per frame
     void Update()
     {
-        //if (Player2.transform.position.y > 0)
-        //{
-        //    GetComponent<PlayerCon2>().enabled = false;
-        //}
-        //else if (Player2.transform.position.y > 0)
-        //{
-        //    GetComponent<PlayerCon2>().enabled = true;
-        //}
-    
-        stop = false;  
+        if (Player2.transform.position.y < 0)
+        {
+            GetComponent<PlayerCon_a>().enabled = true;
+        }
+        else if (Player2.transform.position.y < 0)
+        {
+            GetComponent<PlayerCon_a>().enabled = false;
+        }
+        stop = false;
         //左右移動
         int key = 0;
         if (Input.GetKey(KeyCode.LeftArrow))
-        {    
+        {
             key = 1;
             if (Reverse_Player4.Ma)
             {
                 animator.SetTrigger("walkTrigger");
             }
-            if (Reverse_Player2.MA)
-            {
-                animator.SetTrigger("walkTrigger");
-            }           
             else
             {
                 animator.SetTrigger("Walk2Trigger");
-            }  
-           
+            }
 
             muki_set2 = true;
             stop = true;
         }
 
-        if (Input.GetKey(KeyCode.RightArrow)&& stop == false)
+        if (Input.GetKey(KeyCode.RightArrow) && stop == false)
         {
-           
+
             key = -1;
             if (Reverse_Player4.Ma)
             {
                 animator.SetTrigger("walkTrigger");
-            }           
-            if (Reverse_Player2.MA)
-            {
-                animator.SetTrigger("walkTrigger");
-            }           
-            else 
+            }
+            else
             {
                 animator.SetTrigger("Walk2Trigger");
             }
-          
             muki_set2 = false;
 
         }
@@ -102,15 +91,10 @@ public class PlayerCon2 : MonoBehaviour
             {
                 animator.SetTrigger("stayTrigger");
             }
-            if (Reverse_Player2.MA)
-            {
-                animator.SetTrigger("stayTrigger");
-            }           
             else
             {
                 animator.SetTrigger("stand-by2Trigger");
             }
-          
 
         }
 
@@ -121,13 +105,13 @@ public class PlayerCon2 : MonoBehaviour
         }
 
         //プレイヤの移動速度
-        float speedx = Mathf.Abs(rigid2D.velocity.x);
+        //float speedx = Mathf.Abs(rigid2D.velocity.x);
 
-        //速度制限
-        if (speedx < maxWalkSpeed)
-        {
-            rigid2D.AddForce(transform.right * key * walkForce);
-        }
+        ////速度制限
+        //if (speedx < maxWalkSpeed)
+        //{
+        //    rigid2D.AddForce(transform.right * key * walkForce);
+        //}
 
         //反転
         if (key != 0)
@@ -135,8 +119,8 @@ public class PlayerCon2 : MonoBehaviour
             transform.localScale = new Vector3(key, 1, 1);
         }
 
-        //速度に応じてアニメーション速度を変える
-        animator.speed = speedx / 2.0f;
+        ////速度に応じてアニメーション速度を変える
+        //animator.speed = speedx / 2.0f;
 
         if (!parents_set2)
         {
@@ -224,7 +208,6 @@ public class PlayerCon2 : MonoBehaviour
         //rigid2D.angularVelocity = Vector2.zero;
 
     }
-
 
 
 }

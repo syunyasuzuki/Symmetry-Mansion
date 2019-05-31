@@ -10,7 +10,7 @@ public class Reverse_Player4 : MonoBehaviour {
     public GameObject Portal3;
     public GameObject Portal4;
     public static bool judg2;//入れ替わる際の判定用
-    public static bool MA;
+    public static bool Ma;
 
     // Use this for initialization
     void Start()
@@ -31,11 +31,11 @@ public class Reverse_Player4 : MonoBehaviour {
         {
             Debug.Log("Player2 " + judg2);
         }
-        if (Reverse_Player3.Player.transform.position.x > 0.20f)
+        if (Reverse_Player3.Player.transform.position.x > 0.2f)
         {
             judg2 = true;
         }
-        else if (Reverse_Player3.Player.transform.position.x > -0.20f)
+        else if (Reverse_Player3.Player.transform.position.x > -0.2f)
         {
             judg2 = true;
         }
@@ -71,22 +71,23 @@ public class Reverse_Player4 : MonoBehaviour {
     void judg_Portal()
     {
         Player2.transform.position = Portal3.transform.position;
-        MA = true;
+        Ma = true;
         judg2 = false;
         GetComponent<Reverse_Player4>().enabled = false;
         FadeController.isFade3 = true;
         FadeController.isFadeIn3 = true;
         GetComponent<Reverse_Player4>().enabled = true;
+        Debug.Log("Reverse_Player4" + "T");
     }
     void judg_Portal2()
     {
         Player2.transform.position = Portal4.transform.position;
-        MA = false;
+        Ma = false;
         judg2 = false;
         GetComponent<Reverse_Player4>().enabled = false;
         FadeController.isFade3 = true;
         FadeController.isFadeIn3 = true;
         GetComponent<Reverse_Player4>().enabled = true;
-
+        Debug.Log("Reverse_Player4" + "F");
     }
 }

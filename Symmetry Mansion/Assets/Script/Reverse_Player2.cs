@@ -71,7 +71,7 @@ public class Reverse_Player2 : MonoBehaviour {
         FadeController.isFadeIn3 = true;
         GetComponent<Reverse_Player2>().enabled = false;
         GetComponent<Reverse_Player2>().enabled = true;
-        Debug.Log("T");
+        Debug.Log("Reverse_Player2" + "T");
      
     }
     void judg_Portal2()
@@ -83,6 +83,6 @@ public class Reverse_Player2 : MonoBehaviour {
         FadeController.isFadeIn3 = true;
         GetComponent<Reverse_Player2>().enabled = false;
         GetComponent<Reverse_Player2>().enabled = true;
-        Debug.Log("F");
+        Debug.Log("Reverse_Player2"+"F");
     }
 }
