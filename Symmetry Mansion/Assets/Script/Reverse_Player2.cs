@@ -18,7 +18,7 @@ public class Reverse_Player2 : MonoBehaviour {
         Portal = GameObject.Find("Portal");
         Portal2 = GameObject.Find("Portal2");
         Player2 = GameObject.Find("Player2");
-        MA = false;
+        MA = true;
     }
 
     // Update is called once per frame
@@ -66,6 +66,8 @@ public class Reverse_Player2 : MonoBehaviour {
         Player2.transform.position = Portal.transform.position;
 
         MA = true;
+
+        Debug.Log("T");
      
     }
     void judg_Portal2()
@@ -73,5 +75,7 @@ public class Reverse_Player2 : MonoBehaviour {
         Player2.transform.position = Portal2.transform.position;
 
         MA = false;
+
+        Debug.Log("F");
     }
 }

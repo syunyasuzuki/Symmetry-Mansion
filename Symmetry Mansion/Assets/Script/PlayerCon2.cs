@@ -32,10 +32,6 @@ public class PlayerCon2 : MonoBehaviour
 
         parents_set2 = false;
         muki_set2 = false;
-
-        mp_set = true;
-
-
     }
 
   
@@ -49,7 +45,7 @@ public class PlayerCon2 : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {    
             key = 1;
-            if (mp_set)
+            if (Reverse_Player2.MA)
             {
                 animator.SetTrigger("walkTrigger");
             }
@@ -66,7 +62,7 @@ public class PlayerCon2 : MonoBehaviour
         {
            
             key = -1;
-            if (mp_set)
+            if (Reverse_Player2.MA)
             {
                 animator.SetTrigger("walkTrigger");
             }
@@ -81,7 +77,7 @@ public class PlayerCon2 : MonoBehaviour
         //親子関係を持っていないとき
         if (key == 0 && !parents_set2)
         {
-            if (!Reverse_Player2.MA)
+            if (Reverse_Player2.MA)
             {
                 animator.SetTrigger("stayTrigger");
             }
@@ -89,7 +85,7 @@ public class PlayerCon2 : MonoBehaviour
             {
                 animator.SetTrigger("stand-by2Trigger");
             }
-            
+
         }
 
         if (key == 0)
@@ -201,20 +197,6 @@ public class PlayerCon2 : MonoBehaviour
         rigid2D.velocity = Vector2.zero;
         //rigid2D.angularVelocity = Vector2.zero;
 
-    }
-
-    void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Mirror")
-        {
-            mp_set = true;
-        }
-        
-    }
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-        mp_set = false;
     }
 
 
