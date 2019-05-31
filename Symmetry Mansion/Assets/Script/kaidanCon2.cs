@@ -29,29 +29,21 @@ public class kaidanCon2 : MonoBehaviour
         if (col.gameObject.tag == "Player2")
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                FadeController.isFade3 = true;
-                FadeController.isFadeOut3 = true;
-                Invoke("KaidanMove2_up", 2);
+            {                
+                Invoke("KaidanMove2_up", 0);
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                FadeController.isFade3 = true;
-                FadeController.isFadeOut3 = true;
-                Invoke("KaidanMove2_down", 2);
+            {                
+                Invoke("KaidanMove2_down", 0);
             }
         }
     }
     void KaidanMove2_up()
     {
-        Player2.transform.position = kaidan2_up.transform.position;
-        FadeController.isFade3 = true;
-        FadeController.isFadeIn3 = true;
+        Player2.transform.position = kaidan2_up.transform.position;       
     }
     void KaidanMove2_down()
     {
-        Player2.transform.position = kaidan2_down.transform.position;
-        FadeController.isFade3 = true;
-        FadeController.isFadeIn3 = true;
+        Player2.transform.position = kaidan2_down.transform.position;       
     }
 }

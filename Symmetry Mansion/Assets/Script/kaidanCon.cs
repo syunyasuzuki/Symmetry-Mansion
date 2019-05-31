@@ -28,28 +28,21 @@ public class kaidanCon : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                FadeController.isFade3 = true;
-                FadeController.isFadeOut3 = true;
-                Invoke("KaidanMove_up", 2);
+                Invoke("KaidanMove_up", 0);
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                FadeController.isFade3 = true;
-                FadeController.isFadeOut3 = true;
-                Invoke("KaidanMove_down", 2);
+            {                
+                Invoke("KaidanMove_down", 0);
             }
         }
     }
     void KaidanMove_up()
     {
-        Player.transform.position = kaidan_up.transform.position;
-        FadeController.isFade3 = true;
-        FadeController.isFadeIn3 = true;
+        Player.transform.position = kaidan_up.transform.position;        
     }
     void KaidanMove_down()
     {
         Player.transform.position = kaidan_down.transform.position;
-        FadeController.isFade3 = true;
-        FadeController.isFadeIn3 = true;
+     
     }
 }
