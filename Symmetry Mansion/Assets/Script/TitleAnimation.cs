@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Title_Animation : MonoBehaviour
+public class TitleAnimation : MonoBehaviour
 {
     Animator animator;
     public static bool Fade_start;
