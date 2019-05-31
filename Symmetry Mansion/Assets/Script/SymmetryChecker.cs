@@ -70,6 +70,7 @@ public class SymmetryChecker : MonoBehaviour {
         if (symmetry_count == x_total.Length)
         {
             Symmetry_check = true;
+            Debug.Log(Symmetry_check);
         }
     }
 }

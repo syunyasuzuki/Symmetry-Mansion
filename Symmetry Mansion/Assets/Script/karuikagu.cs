@@ -49,12 +49,12 @@ public class karuikagu : MonoBehaviour
 
         //}
 
-        if (transform.position.x < 0)
+        if (transform.position.x > 0)
         {
             animator.SetTrigger("mirrorTrigger");
         }
 
-        if (transform.position.x > 0)
+        if (transform.position.x < 0)
         {
             animator.SetTrigger("realTrigger");
         }
