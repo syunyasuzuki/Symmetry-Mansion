@@ -15,13 +15,13 @@ public class Destroy : MonoBehaviour {
     {
 
     }
-    void OnTriggerStay2D(Collider2D other)
+    void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                Destroy(obj: gameObject);
+                Destroy(gameObject);
                 Debug.Log("消滅");
             }
         }
