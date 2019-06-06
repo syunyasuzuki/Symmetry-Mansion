@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 166987366}
   - component: {fileID: 166987365}
   - component: {fileID: 166987364}
+  - component: {fileID: 166987368}
   m_Layer: 0
   m_Name: kaidan_Down
   m_TagString: Untagged
@@ -513,8 +514,21 @@ Transform:
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &166987368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 166987363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544af5e9746a30b4eacca16cd7923426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kaidan2_up: {fileID: 166987363}
+  kaidan2_down: {fileID: 220332055}
 --- !u!1 &214823467 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1788938041513082, guid: d35bbdf3bb9e8d343abbbfd5053a0b92,
@@ -531,6 +545,7 @@ GameObject:
   - component: {fileID: 220332057}
   - component: {fileID: 220332056}
   - component: {fileID: 220332059}
+  - component: {fileID: 220332060}
   m_Layer: 0
   m_Name: kaidan1
   m_TagString: Untagged
@@ -633,6 +648,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kaidan_up: {fileID: 166987363}
   kaidan_down: {fileID: 220332055}
+--- !u!114 &220332060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 220332055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544af5e9746a30b4eacca16cd7923426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kaidan2_up: {fileID: 166987363}
+  kaidan2_down: {fileID: 220332055}
 --- !u!1 &233502896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,7 +1741,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4324809818046282, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
       propertyPath: m_RootOrder
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 1135115669169360, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
       propertyPath: m_Name
@@ -1779,6 +1807,7 @@ GameObject:
   - component: {fileID: 1076518239}
   - component: {fileID: 1076518237}
   - component: {fileID: 1076518238}
+  - component: {fileID: 1076518241}
   m_Layer: 0
   m_Name: kaidan_Down (1)
   m_TagString: Untagged
@@ -1881,6 +1910,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1076518241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1076518236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c73419debd81347ab213ef1e2b8e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kaidan_up: {fileID: 1076518236}
+  kaidan_down: {fileID: 1084204908}
 --- !u!1 &1084204908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,6 +1934,7 @@ GameObject:
   - component: {fileID: 1084204910}
   - component: {fileID: 1084204909}
   - component: {fileID: 1084204912}
+  - component: {fileID: 1084204913}
   m_Layer: 0
   m_Name: kaidan1(1)
   m_TagString: Untagged
@@ -1979,7 +2022,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1084204912
 MonoBehaviour:
@@ -1994,6 +2037,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kaidan2_up: {fileID: 1076518236}
   kaidan2_down: {fileID: 1084204908}
+--- !u!114 &1084204913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1084204908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c73419debd81347ab213ef1e2b8e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kaidan_up: {fileID: 1076518236}
+  kaidan_down: {fileID: 1084204908}
 --- !u!1001 &1098259278
 Prefab:
   m_ObjectHideFlags: 0
@@ -2099,7 +2155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4324809818046282, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
       propertyPath: m_RootOrder
-      value: 33
+      value: 34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f87c6ed8aa3dee249bb2441445418e86, type: 2}
